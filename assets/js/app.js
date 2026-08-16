@@ -246,7 +246,7 @@ function renderHeader() {
   const mega = host.querySelector('#mega'), scrim = host.querySelector('#scrim'), catBtn = host.querySelector('#cat-btn');
   const setMega = on => {
     mega.classList.toggle('open', on);
-    if (!on) mega.classList.remove('drill');
+    if (!on) { mega.classList.remove('drill'); openedByHover = false; }
     /* пока открыто меню на телефоне — страница под ним не прокручивается */
     document.body.classList.toggle('menu-open', on && isMobileMenu());
     scrim.classList.toggle('show', on);
@@ -259,22 +259,43 @@ function renderHeader() {
   let hoverTimer = null;
   const cancelClose = () => { if (hoverTimer) { clearTimeout(hoverTimer); hoverTimer = null; } };
   const scheduleClose = () => { cancelClose(); hoverTimer = setTimeout(closeMega, 220); };
-  const hoverOpen = () => { cancelClose(); setMega(true); };
+  let openedByHover = false;
+  const hoverOpen = () => { cancelClose(); openedByHover = !mega.classList.contains('open'); setMega(true); };
 
-  [catBtn, mega].forEach(el => {
-    el.addEventListener('mouseenter', hoverOpen);
-    el.addEventListener('mouseleave', scheduleClose);
-  });
+  /* Открытие по наведению — только для настоящей мыши. На сенсорном экране
+     касание сначала порождает mouseenter (меню открывается), а следом идёт
+     click, который его тут же закрывал — приходилось нажимать дважды. */
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (canHover) {
+    [catBtn, mega].forEach(el => {
+      el.addEventListener('mouseenter', hoverOpen);
+      el.addEventListener('mouseleave', scheduleClose);
+    });
+  }
 
-  /* клик оставляем — он удобен на сенсорных экранах */
+  /* клик оставляем — он основной способ на сенсорных экранах */
   catBtn.addEventListener('click', e => {
     e.stopPropagation();
     cancelClose();
+    /* на устройствах с мышью И сенсором касание успевает открыть меню
+       по наведению; такой клик не должен закрывать его обратно */
+    if (openedByHover) { openedByHover = false; return; }
     setMega(!mega.classList.contains('open'));
   });
 
+  /* любая ссылка с data-open-catalog раскрывает то же меню разделов.
+     href остаётся рабочим, если скрипты отключены */
+  window.openCatalogMenu = () => { cancelClose(); setMega(true); };
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-open-catalog]');
+    if (!t) return;
+    e.preventDefault();
+    window.openCatalogMenu();
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   scrim.addEventListener('click', closeMega);
-  scrim.addEventListener('mouseenter', scheduleClose);
+  if (canHover) scrim.addEventListener('mouseenter', scheduleClose);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') { cancelClose(); closeMega(); } });
 
   /* тема */

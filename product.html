@@ -78,6 +78,7 @@ window.PAGE_INIT = function () {
     ${gallery}
 
     <div class="pdp-info">
+      ${p.tg && p.tg.length ? `<div class="pdp-tags">${tagsOf(p)}</div>` : ''}
       <h1>${p.n}</h1>
       <div class="pdp-meta">
         ${p.b ? `<span>Производитель: <a href="catalog.html?brand=${encodeURIComponent(p.b)}" class="lnk-b">${p.b}</a></span>` : ''}

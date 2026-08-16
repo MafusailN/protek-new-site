@@ -102,6 +102,12 @@ function deriveSpecs(p) {
   return out;
 }
 
+/* плашки товара — как они стоят на pro-tek.pro */
+function tagsOf(p) {
+  if (!p.tg || !p.tg.length) return '';
+  return p.tg.map(t => `<span class="ptag ptag-${t.k}">${t.t}</span>`).join('');
+}
+
 /* полный набор: сначала данные из каталога, затем добранные из названия */
 function allSpecsOf(p) {
   const site = (p.sp || []).map(s => [s[0], s[1], 'каталог Протэк']);
@@ -204,9 +210,12 @@ function renderHeader() {
       <span>${c.name}</span>${icon('chevron', 'icon icon-sm arr')}
     </button>`).join('');
 
+  const isMobileMenu = () => window.matchMedia('(max-width: 860px)').matches;
+
   const paint = i => {
     const c = CATEGORIES[i];
     panel.innerHTML = `
+      <button class="mega-back" type="button">${icon('chevron', 'icon icon-sm')} Все разделы</button>
       <div class="mega-head">
         <a href="catalog.html?cat=${c.id}"><h3>${c.name}</h3></a>
         <span class="muted">${c.sub.length} ${plural(c.sub.length, 'подраздел', 'подраздела', 'подразделов')}</span>
@@ -216,16 +225,30 @@ function renderHeader() {
       </div>
       <div class="mega-foot"><a class="btn btn-primary btn-sm" href="catalog.html?cat=${c.id}">Все товары раздела ${icon('arrow', 'icon icon-sm')}</a></div>`;
     list.querySelectorAll('button').forEach(b => b.classList.toggle('active', +b.dataset.i === i));
+    const back = panel.querySelector('.mega-back');
+    if (back) back.addEventListener('click', () => mega.classList.remove('drill'));
   };
-  paint(0);
+  /* по умолчанию показываем первый раздел, у которого есть подразделы:
+     иначе панель открывается пустой */
+  const firstWithSub = CATEGORIES.findIndex(c => c.sub.length);
+  paint(firstWithSub > -1 ? firstWithSub : 0);
+
   list.querySelectorAll('button').forEach(b => {
-    b.addEventListener('mouseenter', () => paint(+b.dataset.i));
-    b.addEventListener('click', () => location.href = 'catalog.html?cat=' + CATEGORIES[+b.dataset.i].id);
+    b.addEventListener('mouseenter', () => { if (!isMobileMenu()) paint(+b.dataset.i); });
+    b.addEventListener('click', () => {
+      const i = +b.dataset.i;
+      /* на телефоне первое касание раскрывает подразделы, а не уводит со страницы */
+      if (isMobileMenu()) { paint(i); mega.classList.add('drill'); mega.scrollTop = 0; }
+      else location.href = 'catalog.html?cat=' + CATEGORIES[i].id;
+    });
   });
 
   const mega = host.querySelector('#mega'), scrim = host.querySelector('#scrim'), catBtn = host.querySelector('#cat-btn');
   const setMega = on => {
     mega.classList.toggle('open', on);
+    if (!on) mega.classList.remove('drill');
+    /* пока открыто меню на телефоне — страница под ним не прокручивается */
+    document.body.classList.toggle('menu-open', on && isMobileMenu());
     scrim.classList.toggle('show', on);
     catBtn.classList.toggle('open', on);
   };
@@ -283,6 +306,25 @@ function renderHeader() {
     });
   });
   document.addEventListener('click', () => { const m = document.getElementById('city-menu'); if (m) m.remove(); });
+
+  /* подсказка в поиске подстраивается под ширину: длинная строка
+     на телефоне обрезается и выглядит как ошибка */
+  const searchInput = host.querySelector('#search-input');
+  const fitPlaceholder = () => {
+    const w = window.innerWidth;
+    searchInput.placeholder = w < 420 ? 'Поиск по каталогу'
+      : w < 860 ? 'Модель, бренд или артикул'
+      : 'Поиск по каталогу: модель, бренд, артикул';
+  };
+  fitPlaceholder();
+
+  /* реальная высота шапки — от неё отсчитывается меню на телефоне */
+  const headerEl = host.querySelector('.header');
+  const syncHeaderHeight = () => document.documentElement.style
+    .setProperty('--header-real', headerEl.offsetHeight + 'px');
+  syncHeaderHeight();
+
+  window.addEventListener('resize', () => { fitPlaceholder(); syncHeaderHeight(); });
 
   initSearch();
   host.querySelector('#cart-btn').addEventListener('click', () => openCart(true));
@@ -346,6 +388,7 @@ function productCard(p) {
   const inCart = store.cart[p.id];
   return `
   <article class="card" data-id="${p.id}">
+    ${p.tg && p.tg.length ? `<div class="card-tags">${tagsOf(p)}</div>` : ''}
     <button class="card-fav ${fav ? 'on' : ''}" data-fav="${p.id}" aria-label="В избранное">${icon('heart', 'icon icon-sm')}</button>
     <a class="card-link" href="product.html?id=${p.id}">
       <div class="card-media">${p.img

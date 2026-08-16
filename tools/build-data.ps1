@@ -120,6 +120,7 @@ function Reg($p, $catId, $subId) {
       big  = $bigRel
       specs = $(if ($det) { $det.specs } else { $null })
       avail = $(if ($det) { $det.avail } else { $null })
+      tags = $p.tags
       vspecs = $(if ($VEND.ContainsKey($id)) { $VEND[$id].specs } else { $null })
       vshots = $(if ($VEND.ContainsKey($id)) { $VEND[$id].shots } else { $null })
       vurl   = $(if ($VEND.ContainsKey($id)) { $VEND[$id].url } else { '' })
@@ -253,6 +254,10 @@ foreach ($p in $order) {
   if ($p.big)  { $extra += ', big: '  + (JsStr $p.big) }
   $sp = JsSpecs $p.specs; if ($sp) { $extra += ', sp: ' + $sp }
   $av = JsAvail $p.avail; if ($av) { $extra += ', av: ' + $av }
+  if ($p.tags -and $p.tags.Count) {
+    $tj = foreach ($t in $p.tags) { '{ k: ' + (JsStr $t.kind) + ', t: ' + (JsStr $t.text) + ' }' }
+    $extra += ', tg: [' + ($tj -join ',') + ']'
+  }
   $vs = JsSpecs $p.vspecs; if ($vs) { $extra += ', vsp: ' + $vs }
   if ($p.vshots -and $p.vshots.Count) {
     $extra += ', vimg: [' + (($p.vshots | ForEach-Object { JsStr $_ }) -join ',') + ']'

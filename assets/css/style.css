@@ -241,6 +241,22 @@ p  { margin: 0; }
 }
 .mega-list button.active .arr { opacity: 1; }
 .mega-panel { padding: 26px 30px; }
+.mega-back { display: none; }   /* только для телефона */
+
+/* плашки товара: «Распродажа», «Рекомендуем», «Спецпредложение» */
+.ptag { display: inline-block; padding: 3px 9px; border-radius: 6px;
+  font-size: 11px; font-weight: 700; letter-spacing: .01em; white-space: nowrap;
+  background: var(--bg-sunk); color: var(--ink-2); }
+.ptag-sale, .ptag-discount { background: #FDE7E9; color: var(--accent); }
+.ptag-hit, .ptag-recommend { background: #E6F0FB; color: var(--brand); }
+.ptag-special, .ptag-new    { background: #E4F6EC; color: #17794A; }
+:root[data-theme="dark"] .ptag-sale, :root[data-theme="dark"] .ptag-discount { background: #3A1A1E; }
+:root[data-theme="dark"] .ptag-hit, :root[data-theme="dark"] .ptag-recommend { background: #14263C; }
+:root[data-theme="dark"] .ptag-special, :root[data-theme="dark"] .ptag-new { background: #14301F; color: #6FD79B; }
+
+.card-tags { position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; gap: 5px; flex-wrap: wrap; max-width: 78%; }
+.pdp-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
+.pdp-tags .ptag { font-size: 12px; padding: 4px 11px; }
 .mega-cols { columns: 3; column-gap: 34px; }
 .mega-group { break-inside: avoid; margin-bottom: 22px; }
 .mega-group h4 { font-size: 14.5px; margin-bottom: 8px; }
@@ -817,15 +833,37 @@ p  { margin: 0; }
   .search-go { padding: 0 16px; }
   .hact { padding: 6px 7px; }
   .hact span { display: none; }
-  .mega { position: fixed; top: auto; left: 0; right: 0; max-height: 70vh; overflow: auto; }
+  /* Меню каталога на телефоне: панель на весь экран с переходом внутрь
+     раздела. Две колонки мега-меню тут не помещаются. */
+  .mega { position: fixed; inset: var(--header-real, 108px) 0 0 0; z-index: 95;
+    max-height: none; overflow: hidden; border: 0; box-shadow: none; background: var(--surface); }
+  .mega-inner { display: block; height: 100%; padding: 0; max-width: none; }
+  .mega-list, .mega-panel { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch;
+    padding: 8px 0 24px; border: 0; background: var(--surface); }
+  .mega-list { display: block; }
+  .mega-panel { display: none; padding: 8px 16px 28px; }
+  .mega.drill .mega-list { display: none; }
+  .mega.drill .mega-panel { display: block; }
+
+  .mega-list button { width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px; border-radius: 0; font-size: 15px; text-align: left;
+    border-bottom: 1px solid var(--line); background: none; box-shadow: none; }
+  .mega-list button .arr { display: block; margin-left: auto; opacity: .45; }
+  .mega-list button.active { background: none; color: inherit; }
+  .mega-list .cat-ic { width: 26px; height: 26px; }
+
+  .mega-back { display: flex; align-items: center; gap: 8px; padding: 12px 0 14px;
+    font-size: 14.5px; font-weight: 650; color: var(--brand); }
+  .mega-back .icon { transform: rotate(180deg); }
+  .mega-cols { columns: 1; }
+  .mega-sub { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .mega-foot { position: sticky; bottom: 0; background: var(--surface); padding: 12px 0; }
+
+  /* шапка остаётся видимой поверх открытого меню */
+  .header { z-index: 96; }
+  body.menu-open { overflow: hidden; }
   .hero-main { padding: 34px 26px; min-height: 340px; }
   .b2b-l, .b2b-r { padding: 32px 26px; }
-  .mega-inner { grid-template-columns: 1fr; }
-  .mega-list { border-right: 0; border-bottom: 1px solid var(--line); display: flex; overflow-x: auto; }
-  .mega-list button { width: auto; white-space: nowrap; }
-  .mega-list button .arr { display: none; }
-  .mega-panel { padding: 20px; }
-  .mega-cols { columns: 1; }
   .pdp { grid-template-columns: 1fr; }
   .buybox { grid-column: auto; }
   .footer-top { grid-template-columns: 1fr 1fr; }

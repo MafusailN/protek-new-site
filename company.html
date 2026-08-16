@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О компании — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>О компании</span></nav>
+
+    <section class="hero-main" style="border-radius:var(--r-xl);min-height:300px">
+      <span class="hero-eyebrow"><span class="dot"></span> ООО «ПРОТЭК»</span>
+      <h1>Профессиональные технологии безопасности</h1>
+      <p>Коллектив специалистов с опытом работы на рынке систем безопасности от 5 лет. Торговый партнёр основных зарубежных и отечественных брендов.</p>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="article">
+        <p>Мы рады приветствовать вас на сайте нашей компании. «Протэк» — это коллектив высококвалифицированных специалистов с опытом работы на рынке систем безопасности от 5 лет. Наша компания является торговым партнёром основных зарубежных и отечественных брендов.</p>
+        <p>Мы предлагаем своим клиентам широчайший ассортимент продукции от мировых лидеров в сфере интегрированных систем безопасности, систем видеонаблюдения и регистрации, систем контроля и управления доступом, охранной и пожарной сигнализации, а также монтажного оборудования.</p>
+        <p>Главным фактором нашего успеха является команда экспертов, готовых в кратчайшие сроки решить все возникающие задачи наших клиентов. Ассортимент предлагаемой нами продукции постоянно пополняется и обновляется: мы следим за тенденциями развития рынка и держим в курсе наших партнёров.</p>
+        <p>Склад в Новосибирске позволяет не только постоянно держать в наличии весь ассортимент в достаточном объёме, но и в кратчайшие сроки совершать крупногабаритные отгрузки по всей России. Мы можем отгружать в день обращения — мы знаем цену вашего времени.</p>
+        <p>За каждым нашим клиентом закреплён персональный менеджер, который ответит на все вопросы по ценам, ассортименту и логистике. Мы заинтересованы в привлечении новых клиентов и с радостью ответим на все интересующие вас вопросы по подбору и техническим параметрам оборудования.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-sunk">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Каталог в цифрах</h2>
+        <p>По данным выгрузки с действующего сайта</p></div></div>
+      <div class="usp" id="figures"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Направления</h2>
+        <p>Разделы каталога, по которым мы работаем</p></div></div>
+      <div class="cats" id="dirs"></div>
+    </div>
+  </section>
+
+  <section class="section section-sunk">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Отделы компании</h2>
+        <p>Структура по данным страницы контактов</p></div></div>
+      <div class="services" id="deps"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const subCount = CATEGORIES.reduce((a, c) => a + c.sub.length, 0);
+  const brands = new Set(PRODUCTS.map(p => p.b).filter(Boolean));
+
+  document.getElementById('figures').innerHTML = [
+    ['grid', CATEGORIES.length, 'разделов каталога'],
+    ['box', subCount, 'подразделов'],
+    ['cert', brands.size, 'производителей'],
+    ['pin', CITIES.length, 'городов со складами']
+  ].map(f => `<div class="usp-card"><span class="ic">${icon(f[0])}</span>
+      <span><b style="font-size:20px">${f[1]}</b><span>${f[2]}</span></span></div>`).join('');
+
+  document.getElementById('dirs').innerHTML = CATEGORIES.map(c => `
+    <a class="cat-tile" href="catalog.html?cat=${c.id}">
+      <span class="ic">${c.icon ? `<img class="cat-ic-lg" src="${catIcon(c.icon)}" alt="">` : icon('grid')}</span>
+      <b>${c.name}</b><span>${c.sub.length} ${plural(c.sub.length,'подраздел','подраздела','подразделов')}</span></a>`).join('');
+
+  document.getElementById('deps').innerHTML = [
+    ['cart','Отдел продаж','Подбор оборудования, счета, статусы заказов'],
+    ['headset','Технический отдел','Консультации инженеров, help@pro-tek.pro'],
+    ['wrench','Сервисный центр','Гарантийный и постгарантийный ремонт, remont@pro-tek.pro'],
+    ['box','Отдел снабжения','Закупки и поставки под заказ'],
+    ['blueprint','Проектный отдел','Проектные продажи и подбор под объект'],
+    ['truck','Отдел логистики','Отгрузки, склад, доставка']
+  ].map(d => `<div class="svc"><span class="ic">${icon(d[0])}</span><h3>${d[1]}</h3><p>${d[2]}</p></div>`).join('');
+};
+</script>
+</body>
+</html>

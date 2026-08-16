@@ -1,0 +1,10 @@
+# системное
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# временные файлы предпросмотра и отладки
+_shot.html
+_mtest.html
+*.tmp
+*.log

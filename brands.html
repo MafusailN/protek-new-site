@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бренды — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>Бренды</span></nav>
+  <h1 style="font-size:32px;margin-bottom:8px">Бренды</h1>
+  <p class="muted" id="sub" style="margin-bottom:22px"></p>
+
+  <div class="brand-tools">
+    <div class="brand-search">
+      <input type="text" id="bsearch" placeholder="Найти производителя">
+    </div>
+    <div class="brand-abc" id="abc"></div>
+  </div>
+
+  <div class="brand-grid" id="brands"></div>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  /* сколько товаров каждого бренда есть в выгруженной части каталога */
+  const local = {};
+  PRODUCTS.forEach(p => { if (p.b) local[p.b.toLowerCase()] = (local[p.b.toLowerCase()] || 0) + 1; });
+
+  const list = BRANDS.slice().sort((a, b) => b.n - a.n || a.name.localeCompare(b.name, 'ru'));
+
+  document.getElementById('sub').textContent =
+    `${list.length} ${plural(list.length,'производитель','производителя','производителей')} в каталоге`;
+
+  /* алфавитный указатель */
+  const letters = [...new Set(list.map(b => b.name[0].toUpperCase()))].sort((a, b) => a.localeCompare(b, 'ru'));
+  document.getElementById('abc').innerHTML =
+    `<button class="abc-b on" data-l="">Все</button>` +
+    letters.map(l => `<button class="abc-b" data-l="${l}">${l}</button>`).join('');
+
+  let letter = '', query = '';
+
+  const paint = () => {
+    const shown = list.filter(b =>
+      (!letter || b.name[0].toUpperCase() === letter) &&
+      (!query || b.name.toLowerCase().includes(query)));
+
+    document.getElementById('brands').innerHTML = shown.length
+      ? shown.map(b => {
+          const mine = local[b.name.toLowerCase()] || 0;
+          return `<a class="brand-card" href="catalog.html?brand=${encodeURIComponent(b.name)}" title="${b.name}">
+            <span class="brand-logo">${b.logo
+              ? `<img src="${b.logo}" alt="${b.name}" loading="lazy">`
+              : `<span class="brand-letter">${b.name[0]}</span>`}</span>
+            <b>${b.name}</b>
+            <span class="brand-n">${b.n} ${plural(b.n,'товар','товара','товаров')}${mine ? ` · ${mine} в демо` : ''}</span>
+          </a>`;
+        }).join('')
+      : `<div class="empty-state" style="grid-column:1/-1">${icon('search')}<h3>Ничего не найдено</h3></div>`;
+  };
+
+  document.getElementById('bsearch').addEventListener('input', e => { query = e.target.value.trim().toLowerCase(); paint(); });
+  document.getElementById('abc').addEventListener('click', e => {
+    const b = e.target.closest('[data-l]'); if (!b) return;
+    letter = b.dataset.l;
+    document.querySelectorAll('.abc-b').forEach(x => x.classList.toggle('on', x === b));
+    paint();
+  });
+
+  paint();
+};
+</script>
+</body>
+</html>

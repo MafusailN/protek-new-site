@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Поддержка — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>Поддержка</span></nav>
+  <h1 style="font-size:32px;margin-bottom:10px">Поддержка</h1>
+  <p class="muted" style="max-width:70ch;margin-bottom:28px">Технические вопросы — в технический отдел, ремонт оборудования — в сервисный центр.</p>
+
+  <div class="services" id="channels" style="margin-bottom:40px"></div>
+
+  <div class="section-head"><div><h2>Разделы помощи</h2>
+    <p>Те же пункты, что и в меню действующего сайта</p></div></div>
+  <div class="cats" id="sections"></div>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  document.getElementById('channels').innerHTML = [
+    ['headset','Технический отдел','Консультации по подбору, совместимости и настройке оборудования.',
+     'help@pro-tek.pro','+7 (383) 383-50-14 доб. 112 или 122','+7 (923) 121-10-68, +7 (923) 121-11-62'],
+    ['wrench','Сервисный центр','Гарантийный и постгарантийный ремонт оборудования.',
+     'remont@pro-tek.pro','+7 (383) 383-50-14','']
+  ].map(c => `<div class="svc"><span class="ic">${icon(c[0])}</span>
+      <h3>${c[1]}</h3><p>${c[2]}</p>
+      <a href="mailto:${c[3]}" class="lnk-b">${c[3]}</a>
+      <span style="font-weight:650">${c[4]}</span>
+      ${c[5] ? `<span class="muted" style="font-size:13px">Мобильный: ${c[5]}</span>` : ''}</div>`).join('');
+
+  const sup = (typeof MENU !== 'undefined' ? MENU : []).find(m => m.url === '/support/');
+  const items = (sup && sup.sub.length) ? sup.sub : [];
+  document.getElementById('sections').innerHTML = items.map(s => `
+    <a class="cat-tile" href="https://pro-tek.pro${s.url}" target="_blank" rel="noopener">
+      <span class="ic">${icon('blueprint')}</span><b>${s.name}</b>
+      <span>Раздел на pro-tek.pro</span></a>`).join('')
+    || '<p class="muted">Разделы появятся после сборки данных.</p>';
+};
+</script>
+</body>
+</html>

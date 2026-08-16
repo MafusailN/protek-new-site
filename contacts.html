@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>Контакты</span></nav>
+  <h1 style="font-size:32px;margin-bottom:10px">Контакты</h1>
+  <p class="muted" style="max-width:66ch;margin-bottom:26px">За каждым клиентом закреплён персональный менеджер. Общий номер — единый для всех отделов, добавочные указаны у сотрудников на действующем сайте.</p>
+
+  <div class="catalog-layout contacts-layout">
+    <section>
+      <div class="services" style="grid-template-columns:1fr 1fr" id="deps"></div>
+
+      <div class="section-head" style="margin-top:40px"><div><h2>Офисы и склады</h2>
+        <p>Самовывоз бесплатный во всех городах присутствия</p></div></div>
+      <div class="grid-products" id="offices"></div>
+    </section>
+
+    <aside class="buybox">
+      <h3 style="font-size:19px;margin-bottom:4px">Написать нам</h3>
+      <p class="muted" style="font-size:13.5px;margin-bottom:16px">Ответим в рабочее время.</p>
+      <form id="cb" style="display:grid;gap:12px">
+        <div class="field ffield"><label>Имя и фамилия *</label><input required placeholder="Как к вам обращаться"></div>
+        <div class="field ffield"><label>Телефон *</label><input required type="tel" placeholder="+7 (___) ___-__-__"></div>
+        <div class="field ffield"><label>E-mail</label><input type="email" placeholder="mail@company.ru"></div>
+        <div class="field ffield"><label>Текст сообщения</label><textarea rows="3" placeholder="Коротко о задаче"></textarea></div>
+        <label class="check"><input type="checkbox" required><span style="font-size:12.5px">Согласен на обработку персональных данных</span></label>
+        <button class="btn btn-primary btn-lg btn-block">Отправить</button>
+      </form>
+      <hr>
+      <a class="btn btn-ghost btn-block btn-sm" href="tel:+73833835014" style="margin-bottom:8px">+7 (383) 383-50-14</a>
+      <a class="btn btn-ghost btn-block btn-sm" href="mailto:zakaz@pro-tek.pro">zakaz@pro-tek.pro</a>
+    </aside>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  document.getElementById('deps').innerHTML = [
+    ['cart','Отдел продаж','Заказы, счета, наличие и сроки','+7 (383) 383-50-14','zakaz@pro-tek.pro'],
+    ['headset','Технический отдел','Подбор и настройка оборудования','+7 (383) 383-50-14 доб. 112, 122','help@pro-tek.pro'],
+    ['wrench','Сервисный центр','Гарантийный и постгарантийный ремонт','+7 (383) 383-50-14','remont@pro-tek.pro'],
+    ['blueprint','Проектный отдел','Подбор под объект и проектные продажи','+7 (383) 383-50-14','zakaz@pro-tek.pro']
+  ].map(d => `<div class="svc"><span class="ic">${icon(d[0])}</span>
+      <h3>${d[1]}</h3>
+      <p>${d[2]}</p>
+      <a href="tel:+73833835014" style="font-weight:700;font-size:15px">${d[3]}</a>
+      <a href="mailto:${d[4]}" class="lnk-b" style="font-size:14px">${d[4]}</a></div>`).join('');
+
+  const OFFICES = [
+    ['Новосибирск','ул. Дуси Ковальчук, 378а, корпус 3'],
+    ['Барнаул','проспект Ленина, 195а'],
+    ['Кемерово','ул. Терешковой, 41В, пом. 12'],
+    ['Новокузнецк','ул. Орджоникидзе, 18'],
+    ['Томск','ул. Енисейская, 4'],
+    ['Красноярск','ул. Копылова, 50']
+  ];
+  document.getElementById('offices').innerHTML = OFFICES.map(o => `
+    <div class="card store-card">
+      <div class="store-ic">${icon('pin')}</div>
+      <h3 class="card-title" style="min-height:auto;font-size:16px">${o[0]}</h3>
+      <p class="muted" style="font-size:13.5px">г. ${o[0]}, ${o[1]}</p>
+      <a class="lnk-b" style="font-size:13.5px;margin-top:8px;display:inline-block"
+         href="https://yandex.ru/maps/?text=${encodeURIComponent(o[0] + ', ' + o[1])}" target="_blank" rel="noopener">Показать на карте →</a>
+    </div>`).join('');
+
+  document.getElementById('cb').addEventListener('submit', e => {
+    e.preventDefault(); e.target.reset();
+    toast('Демо-версия: форма не отправляется', 'phone');
+  });
+};
+</script>
+</body>
+</html>

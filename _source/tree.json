@@ -1,0 +1,968 @@
+﻿{
+    "source":  "https://pro-tek.pro",
+    "fetchedAt":  "2026-08-16 13:11",
+    "topMenu":  [
+                    {
+                        "name":  "Каталог",
+                        "url":  "/catalog/"
+                    },
+                    {
+                        "name":  "О компании",
+                        "url":  "/company/"
+                    },
+                    {
+                        "name":  "Бренды",
+                        "url":  "/catalog/brends/"
+                    },
+                    {
+                        "name":  "Доставка",
+                        "url":  "/delivery/"
+                    },
+                    {
+                        "name":  "Поддержка",
+                        "url":  "/support/"
+                    },
+                    {
+                        "name":  "Контакты",
+                        "url":  "/contacts/"
+                    }
+                ],
+    "categories":  [
+                       {
+                           "name":  "Новинки",
+                           "url":  "/catalog/cid/novinki/",
+                           "icon":  "/files/flib/8171.svg",
+                           "sub":  [
+
+                                   ]
+                       },
+                       {
+                           "name":  "Распродажа",
+                           "url":  "/catalog/cid/rasprodazha/",
+                           "icon":  "/files/flib/473.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Видеонаблюдение",
+                                           "url":  "/catalog/cid/rasprodazha-videonablyudenie/"
+                                       },
+                                       {
+                                           "name":  "Источники питания",
+                                           "url":  "/catalog/cid/rasprodazha-istochniki-pitaniya/"
+                                       },
+                                       {
+                                           "name":  "Монтажные материалы",
+                                           "url":  "/catalog/cid/montazhnye-materialy/"
+                                       },
+                                       {
+                                           "name":  "Проектное оборудование",
+                                           "url":  "/catalog/cid/proektnoe_oborudovanie/"
+                                       },
+                                       {
+                                           "name":  "Шкафы и стойки",
+                                           "url":  "/catalog/cid/shkafy_i_stojki/"
+                                       },
+                                       {
+                                           "name":  "Электротехническая продукция",
+                                           "url":  "/catalog/cid/elektrotehnicheskaya_produktsiya/"
+                                       },
+                                       {
+                                           "name":  "Кабельнесущие системы",
+                                           "url":  "/catalog/cid/kabelnesushchie_sistemy1/"
+                                       },
+                                       {
+                                           "name":  "Кабель и провода",
+                                           "url":  "/catalog/cid/kabel_i_provoda1/"
+                                       },
+                                       {
+                                           "name":  "Охранно-пожарная сигнализация",
+                                           "url":  "/catalog/cid/ohranno-pozharnaya_signalizatsiya_1/"
+                                       },
+                                       {
+                                           "name":  "Системы контроля и управления доступом",
+                                           "url":  "/catalog/cid/sistemy_kontrolya_i_upravleniya_dostupom1/"
+                                       },
+                                       {
+                                           "name":  "Монтажные материалы и крепёж",
+                                           "url":  "/catalog/cid/montazhnye_materialy_i_krepyozh1/"
+                                       },
+                                       {
+                                           "name":  "Светотехника",
+                                           "url":  "/catalog/cid/svetotehnika1/"
+                                       },
+                                       {
+                                           "name":  "Шлагбаумы и автоматика",
+                                           "url":  "/catalog/cid/shlagbaumy_i_avtomatika1/"
+                                       },
+                                       {
+                                           "name":  "Системы оповещения и музыкальной трансляции",
+                                           "url":  "/catalog/cid/sistemy_opoveshcheniya_i_muzykalnoj_translyatsii1/"
+                                       },
+                                       {
+                                           "name":  "Сетевое оборудование",
+                                           "url":  "/catalog/cid/setevoe-oborudovanie-so-skidkoy/"
+                                       },
+                                       {
+                                           "name":  "Домофония",
+                                           "url":  "/catalog/cid/rasprodazha-domofonii/"
+                                       },
+                                       {
+                                           "name":  "Телефония",
+                                           "url":  "/catalog/cid/3026/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Видеонаблюдение",
+                           "url":  "/catalog/cid/videonablyudenie/",
+                           "icon":  "/files/flib/244.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Видеонаблюдение для транспорта",
+                                           "url":  "/catalog/cid/videonablyudenie_dlya_transporta/"
+                                       },
+                                       {
+                                           "name":  "Тепловизионное оборудование",
+                                           "url":  "/catalog/cid/teplovizionnoe_oborudovanie1/"
+                                       },
+                                       {
+                                           "name":  "Мониторы и кронштейны",
+                                           "url":  "/catalog/cid/monitory_i_kronshtejny/"
+                                       },
+                                       {
+                                           "name":  "Комплектующие для видеонаблюдения",
+                                           "url":  "/catalog/cid/komplektuyuschie-dlya-videonablyudeniya/"
+                                       },
+                                       {
+                                           "name":  "Программное обеспечение для видеонаблюдения",
+                                           "url":  "/catalog/cid/2402/"
+                                       },
+                                       {
+                                           "name":  "Видеокамеры",
+                                           "url":  "/catalog/cid/2860/"
+                                       },
+                                       {
+                                           "name":  "Видеорегистраторы",
+                                           "url":  "/catalog/cid/2870/"
+                                       },
+                                       {
+                                           "name":  "Коробка монтажная",
+                                           "url":  "/catalog/cid/2919/"
+                                       },
+                                       {
+                                           "name":  "Кронштейны",
+                                           "url":  "/catalog/cid/2920/"
+                                       },
+                                       {
+                                           "name":  "Передача и защита сигнала",
+                                           "url":  "/catalog/cid/2923/"
+                                       },
+                                       {
+                                           "name":  "Микрофоны",
+                                           "url":  "/catalog/cid/2929/"
+                                       },
+                                       {
+                                           "name":  "Жёсткие диски",
+                                           "url":  "/catalog/cid/2932/"
+                                       },
+                                       {
+                                           "name":  "Карты памяти",
+                                           "url":  "/catalog/cid/2934/"
+                                       },
+                                       {
+                                           "name":  "Комплекты видеонаблюдения",
+                                           "url":  "/catalog/cid/2955/"
+                                       },
+                                       {
+                                           "name":  "Серверное оборудование",
+                                           "url":  "/catalog/cid/2959/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Источники питания",
+                           "url":  "/catalog/cid/istochniki-pitaniya/",
+                           "icon":  "/files/flib/245.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Источники бесперебойного питания",
+                                           "url":  "/catalog/cid/istochniki-bespereboynogo-pitaniya/"
+                                       },
+                                       {
+                                           "name":  "Аккумуляторы и акссессуары к АКБ",
+                                           "url":  "/catalog/cid/akkumulyatory-i-akssessuary-k-akb/"
+                                       },
+                                       {
+                                           "name":  "Блоки питания",
+                                           "url":  "/catalog/cid/bloki-pitaniya/"
+                                       },
+                                       {
+                                           "name":  "Стабилизаторы напряжения",
+                                           "url":  "/catalog/cid/stabilizatory-napryazheniya/"
+                                       },
+                                       {
+                                           "name":  "Преобразователи напряжения",
+                                           "url":  "/catalog/cid/preobrazovateli-napryazheniya/"
+                                       },
+                                       {
+                                           "name":  "Элементы питания и батарейки",
+                                           "url":  "/catalog/cid/elementy-pitaniya-i-batareyki/"
+                                       },
+                                       {
+                                           "name":  "Защита от скачков напряжения",
+                                           "url":  "/catalog/cid/zaschita-ot-skachkov-napryazheniya/"
+                                       },
+                                       {
+                                           "name":  "Сетевые фильтры",
+                                           "url":  "/catalog/cid/setevye-filtry/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Шкафы и стойки",
+                           "url":  "/catalog/cid/shkafy-i-stoyki/",
+                           "icon":  "/files/flib/251.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Шкафы напольные 19\"",
+                                           "url":  "/catalog/cid/shkafy-napolnye-19/"
+                                       },
+                                       {
+                                           "name":  "Коммутационные аксессуары для шкафов",
+                                           "url":  "/catalog/cid/kommutacionnye-aksessuary-dlya-shkafov/"
+                                       },
+                                       {
+                                           "name":  "Комплектующие и аксессуары для шкафов и стоек 19\"",
+                                           "url":  "/catalog/cid/komplektuyuschie-i-aksessuary-dlya-shkafov-i-stoek-19/"
+                                       },
+                                       {
+                                           "name":  "Шкафы уличного исполнения 19\"",
+                                           "url":  "/catalog/cid/shkafy-ulichnogo-ispolneniya-19/"
+                                       },
+                                       {
+                                           "name":  "Шкафы пылезащищенного исполнения 19\"",
+                                           "url":  "/catalog/cid/shkafy-pylezaschischennogo-ispolneniya-19/"
+                                       },
+                                       {
+                                           "name":  "Шкафы настенные антивандальные 19\"",
+                                           "url":  "/catalog/cid/shkafy-nastennye-antivandalnye-19/"
+                                       },
+                                       {
+                                           "name":  "Шкафы настенные 19\"",
+                                           "url":  "/catalog/cid/shkafy-nastennye-19/"
+                                       },
+                                       {
+                                           "name":  "Монтажные стойки",
+                                           "url":  "/catalog/cid/montazhnye_stojki/"
+                                       },
+                                       {
+                                           "name":  "Шкафы настенные 10\"",
+                                           "url":  "/catalog/cid/shkafy_nastennye_10/"
+                                       },
+                                       {
+                                           "name":  "Шкафы и боксы для оптического оборудования",
+                                           "url":  "/catalog/cid/shkafy_i_boksy_dlya_opticheskogo_oborudovaniya/"
+                                       },
+                                       {
+                                           "name":  "Шкафы аптечные",
+                                           "url":  "/catalog/cid/shkafy-aptechnyye/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Сетевое оборудование",
+                           "url":  "/catalog/cid/setevoe-oborudovanie/",
+                           "icon":  "/files/flib/252.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Антенны и аксессуары",
+                                           "url":  "/catalog/cid/antenny-i-aksessuary/"
+                                       },
+                                       {
+                                           "name":  "Оптическое оборудование",
+                                           "url":  "/catalog/cid/opticheskoe_oborudovanie/"
+                                       },
+                                       {
+                                           "name":  "Программное обеспечение и мониторинг",
+                                           "url":  "/catalog/cid/programmnoe_obespechenie_i_monitoring/"
+                                       },
+                                       {
+                                           "name":  "Аксессуары",
+                                           "url":  "/catalog/cid/aksessuary-dlya-setevogo-oborudovaniya/"
+                                       },
+                                       {
+                                           "name":  "GSM оборудование",
+                                           "url":  "/catalog/cid/3103/"
+                                       },
+                                       {
+                                           "name":  "Wi-Fi Оборудование",
+                                           "url":  "/catalog/cid/3105/"
+                                       },
+                                       {
+                                           "name":  "Коммутационное оборудование",
+                                           "url":  "/catalog/cid/3108/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Проектное оборудование",
+                           "url":  "/catalog/cid/proektnoe-oborudovanie/",
+                           "icon":  "/files/flib/253.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "СКУД и Автоматика",
+                                           "url":  "/catalog/cid/proektnoe-oborudovanie-skud-i-avtomatika/"
+                                       },
+                                       {
+                                           "name":  "Комплектующие для видеонаблюдения",
+                                           "url":  "/catalog/cid/proektnoe-oborudovanie-komplektuyuschie-dlya-videonablyudeniya/"
+                                       },
+                                       {
+                                           "name":  "Специализированное оборудование",
+                                           "url":  "/catalog/cid/spetsializirovannoe_oborudovanie/"
+                                       },
+                                       {
+                                           "name":  "Видеостены",
+                                           "url":  "/catalog/cid/videosteny/"
+                                       },
+                                       {
+                                           "name":  "Аналоговое оборудование (AHD, TVI, CVI)",
+                                           "url":  "/catalog/cid/analogovoe_oborudovanie_ahd_tvi_cvi/"
+                                       },
+                                       {
+                                           "name":  "СХД и серверы",
+                                           "url":  "/catalog/cid/shd_i_servery/"
+                                       },
+                                       {
+                                           "name":  "Шкафы",
+                                           "url":  "/catalog/cid/shkafy/"
+                                       },
+                                       {
+                                           "name":  "Программное обеспечение для видеонаблюдения",
+                                           "url":  "/catalog/cid/programmnoe_obespechenie_dlya_videonablyudeniya/"
+                                       },
+                                       {
+                                           "name":  "Блоки питания",
+                                           "url":  "/catalog/cid/bloki_pitaniya/"
+                                       },
+                                       {
+                                           "name":  "Взрывозащищенное оборудование Ex",
+                                           "url":  "/catalog/cid/vzryvozashchishchennoe_oborudovanie_ex/"
+                                       },
+                                       {
+                                           "name":  "Hikvision (project)",
+                                           "url":  "/catalog/cid/hikvision_project/"
+                                       },
+                                       {
+                                           "name":  "Dahua (project)",
+                                           "url":  "/catalog/cid/dahua_project/"
+                                       },
+                                       {
+                                           "name":  "IP-видеооборудование",
+                                           "url":  "/catalog/cid/proyektnoye-ip-videooborudovaniye/"
+                                       },
+                                       {
+                                           "name":  "Прочее",
+                                           "url":  "/catalog/cid/prochee-proyektnoye-oborudovaniye/"
+                                       },
+                                       {
+                                           "name":  "Сетевое оборудование",
+                                           "url":  "/catalog/cid/proyektnoye-setevoye-oborudovaniye/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Электротехническая продукция",
+                           "url":  "/catalog/cid/elektrotehnicheskaya-produkciya/",
+                           "icon":  "/files/flib/254.svg",
+                           "sub":  [
+                                       {
+                                           "name":  "Ящики электроустановочные",
+                                           "url":  "/catalog/cid/yaschiki-elektroustanovochnye/"
+                                       },
+                                       {
+                                           "name":  "Ящики электроустановочные с подогревом",
+                                           "url":  "/catalog/cid/yaschiki-elektroustanovochnye-s-podogrevom/"
+                                       },
+                                       {
+                                           "name":  "Автоматические выключатели",
+                                           "url":  "/catalog/cid/avtomaticheskie-vyklyuchateli/"
+                                       },
+                                       {
+                                           "name":  "Силовые вилки и розетки",
+                                           "url":  "/catalog/cid/silovye-vilki-i-rozetki/"
+                                       },
+                                       {
+                                           "name":  "Умный дом",
+                                           "url":  "/catalog/cid/umnyj_dom/"
+                                       },
+                                       {
+                                           "name":  "Зажимы",
+                                           "url":  "/catalog/cid/zazhimy/"
+                                       },
+                                       {
+                                           "name":  "Реле",
+                                           "url":  "/catalog/cid/rele/"
+                                       },
+                                       {
+                                           "name":  "Наконечники, гильзы и соединители",
+                                           "url":  "/catalog/cid/nakonechniki_gilzy_i_soediniteli/"
+                                       },
+                                       {
+                                           "name":  "Теплый дом",
+                                           "url":  "/catalog/cid/teplyy-dom/"
+                                       },
+                                       {
+                                           "name":  "Выключатели",
+                                           "url":  "/catalog/cid/vyklyuchateli/"
+                                       },
+                                       {
+                                           "name":  "Аксессуары",
+                                           "url":  "/catalog/cid/aksessuary-dlya-elektrotekhnicheskoy-produktsii/"
+                                       },
+                                       {
+                                           "name":  "Кнопки, переключатели, светосигнальная аппаратура",
+                                           "url":  "/catalog/cid/knopki-pereklyuchateli-svetosignalnaya-apparatura/"
+                                       },
+                                       {
+                                           "name":  "Устройства защиты, плавкие предохранители, модульные устройства/монтажные устройства",
+                                           "url":  "/catalog/cid/ustroystva-zaschity-plavkiye-predokhraniteli-modulnyye-ustroystva-montazhnyye-ustroystva/"
+                                       },
+                                       {
+                                           "name":  "Зарядные станции",
+                                           "url":  "/catalog/cid/zaryadnye-stancii/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Кабельнесущие системы",
+                           "url":  "/catalog/cid/kabelnesushchie_sistemy/",
+                           "icon":  "/files/flib/10687.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Аксессуары для кабель-каналов и труб",
+                                           "url":  "/catalog/cid/aksessuary_dlya_kabel-kanalov_i_trub/"
+                                       },
+                                       {
+                                           "name":  "Металлические лотки",
+                                           "url":  "/catalog/cid/metallicheskie_lotki/"
+                                       },
+                                       {
+                                           "name":  "Кабель-канал",
+                                           "url":  "/catalog/cid/kabel-kanal_1/"
+                                       },
+                                       {
+                                           "name":  "Труба гладкая жесткая",
+                                           "url":  "/catalog/cid/truba_gladkaya_zhestkaya/"
+                                       },
+                                       {
+                                           "name":  "Труба гофрированная",
+                                           "url":  "/catalog/cid/truba_gofrirovannaya/"
+                                       },
+                                       {
+                                           "name":  "Металлорукав",
+                                           "url":  "/catalog/cid/metallorukav_1/"
+                                       },
+                                       {
+                                           "name":  "Изоляционные и защитные материалы для кабеля",
+                                           "url":  "/catalog/cid/3062/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Охранно-пожарная сигнализация",
+                           "url":  "/catalog/cid/ohranno-pozharnaya_signalizatsiya_/",
+                           "icon":  "/files/flib/10689.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Гибридные системы",
+                                           "url":  "/catalog/cid/gibridnye_sistemy/"
+                                       },
+                                       {
+                                           "name":  "Прочее",
+                                           "url":  "/catalog/cid/prochee-ops/"
+                                       },
+                                       {
+                                           "name":  "Радиоканальные охранно-пожарные системы",
+                                           "url":  "/catalog/cid/2967/"
+                                       },
+                                       {
+                                           "name":  "Адресные охранно-пожарные системы",
+                                           "url":  "/catalog/cid/2970/"
+                                       },
+                                       {
+                                           "name":  "Аналоговые охранно-пожарные системы",
+                                           "url":  "/catalog/cid/3011/"
+                                       },
+                                       {
+                                           "name":  "Программное обеспечение для охранно-пожарных систем",
+                                           "url":  "/catalog/cid/3024/"
+                                       },
+                                       {
+                                           "name":  "Охрана периметра",
+                                           "url":  "/catalog/cid/3029/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Системы контроля и управления доступом",
+                           "url":  "/catalog/cid/sistemy_kontrolya_i_upravleniya_dostupom/",
+                           "icon":  "/files/flib/10691.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Считыватели",
+                                           "url":  "/catalog/cid/schityvateli/"
+                                       },
+                                       {
+                                           "name":  "Контроллеры",
+                                           "url":  "/catalog/cid/kontrollery_1/"
+                                       },
+                                       {
+                                           "name":  "Кнопки выхода и аксессуары к ним",
+                                           "url":  "/catalog/cid/knopki_vyhoda_i_aksessuary_k_nim/"
+                                       },
+                                       {
+                                           "name":  "Дверные доводчики",
+                                           "url":  "/catalog/cid/dvernye_dovodchiki/"
+                                       },
+                                       {
+                                           "name":  "Программное обеспечение для СКУД",
+                                           "url":  "/catalog/cid/programmnoe_obespechenie_dlya_skud/"
+                                       },
+                                       {
+                                           "name":  "Досмотровое оборудование",
+                                           "url":  "/catalog/cid/dosmotrovoe_oborudovanie1/"
+                                       },
+                                       {
+                                           "name":  "Кодонаборные панели",
+                                           "url":  "/catalog/cid/kodonabornye_paneli/"
+                                       },
+                                       {
+                                           "name":  "Устройства управления",
+                                           "url":  "/catalog/cid/ustrojstva-upravleniya-skuda/"
+                                       },
+                                       {
+                                           "name":  "Турникеты, проходные, ограждения",
+                                           "url":  "/catalog/cid/3068/"
+                                       },
+                                       {
+                                           "name":  "Замки и защелки",
+                                           "url":  "/catalog/cid/3073/"
+                                       },
+                                       {
+                                           "name":  "Идентификаторы",
+                                           "url":  "/catalog/cid/3078/"
+                                       },
+                                       {
+                                           "name":  "Терминалы",
+                                           "url":  "/catalog/cid/3082/"
+                                       },
+                                       {
+                                           "name":  "Комплекты СКУД",
+                                           "url":  "/catalog/cid/3088/"
+                                       },
+                                       {
+                                           "name":  "Системы контроля охраны",
+                                           "url":  "/catalog/cid/3089/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Домофония",
+                           "url":  "/catalog/cid/domofoniya/",
+                           "icon":  "/files/flib/10684.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Аудиодомофоны",
+                                           "url":  "/catalog/cid/audiodomofony_1/"
+                                       },
+                                       {
+                                           "name":  "Видеодомофоны",
+                                           "url":  "/catalog/cid/videoiodomofony-1/"
+                                       },
+                                       {
+                                           "name":  "Переговорные устройства",
+                                           "url":  "/catalog/cid/3043/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Монтажные материалы и крепёж",
+                           "url":  "/catalog/cid/montazhnye_materialy_i_krepyozh/",
+                           "icon":  "/files/flib/10688.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Стяжки и хомуты",
+                                           "url":  "/catalog/cid/styazhki_i_homuty/"
+                                       },
+                                       {
+                                           "name":  "Крепёж",
+                                           "url":  "/catalog/cid/krepyozh/"
+                                       },
+                                       {
+                                           "name":  "Изолента",
+                                           "url":  "/catalog/cid/izolenta_1/"
+                                       },
+                                       {
+                                           "name":  "УЗК (Протяжки)",
+                                           "url":  "/catalog/cid/uzk_protyazhki/"
+                                       },
+                                       {
+                                           "name":  "Резисторы",
+                                           "url":  "/catalog/cid/rezistory_1/"
+                                       },
+                                       {
+                                           "name":  "Трос",
+                                           "url":  "/catalog/cid/tros/"
+                                       },
+                                       {
+                                           "name":  "Буры и сверла",
+                                           "url":  "/catalog/cid/bury_i_sverla/"
+                                       },
+                                       {
+                                           "name":  "Перчатки",
+                                           "url":  "/catalog/cid/perchatki/"
+                                       },
+                                       {
+                                           "name":  "Кембрик, трубка ПВХ",
+                                           "url":  "/catalog/cid/kembrik_trubka_pvh/"
+                                       },
+                                       {
+                                           "name":  "Маркеры для кабелей и оборудования",
+                                           "url":  "/catalog/cid/markery_dlya_kabelej_i_oborudovaniya/"
+                                       },
+                                       {
+                                           "name":  "Переходники",
+                                           "url":  "/catalog/cid/perehodniki/"
+                                       },
+                                       {
+                                           "name":  "Прочее",
+                                           "url":  "/catalog/cid/prochee/"
+                                       },
+                                       {
+                                           "name":  "Герметик и аксессуары",
+                                           "url":  "/catalog/cid/germetik-i-aksessuary/"
+                                       },
+                                       {
+                                           "name":  "Коробки распределительные и коммутационные",
+                                           "url":  "/catalog/cid/2823/"
+                                       },
+                                       {
+                                           "name":  "Держатели-клипсы и скобы",
+                                           "url":  "/catalog/cid/3095/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Кабель и провода",
+                           "url":  "/catalog/cid/kabel_i_provoda/",
+                           "icon":  "/files/flib/10686.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Оптический кабель",
+                                           "url":  "/catalog/cid/opticheskij_kabel/"
+                                       },
+                                       {
+                                           "name":  "Кабель для ОПС",
+                                           "url":  "/catalog/cid/kabel_dlya_ops/"
+                                       },
+                                       {
+                                           "name":  "Кабель для систем видеонаблюдения",
+                                           "url":  "/catalog/cid/kabel_dlya_sistem_videonablyudeniya/"
+                                       },
+                                       {
+                                           "name":  "Витая пара (UTP, FTP, STP)",
+                                           "url":  "/catalog/cid/vitaya_para_utp_ftp_stp/"
+                                       },
+                                       {
+                                           "name":  "Кабель силовой",
+                                           "url":  "/catalog/cid/kabel_silovoj/"
+                                       },
+                                       {
+                                           "name":  "Кабель микрофонный",
+                                           "url":  "/catalog/cid/kabel_mikrofonnyj/"
+                                       },
+                                       {
+                                           "name":  "Аксессуары",
+                                           "url":  "/catalog/cid/aksessuary-dlya-kabeley-i-provodov/"
+                                       },
+                                       {
+                                           "name":  "Кабель HDMI",
+                                           "url":  "/catalog/cid/kabel-hdmi/"
+                                       },
+                                       {
+                                           "name":  "Кабель и удлинители USB",
+                                           "url":  "/catalog/cid/kabel-i-udliniteli-usb/"
+                                       },
+                                       {
+                                           "name":  "Патч-корды",
+                                           "url":  "/catalog/cid/3049/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Телефония",
+                           "url":  "/catalog/cid/telefoniya/",
+                           "icon":  "/files/flib/10694.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Yealink",
+                                           "url":  "/catalog/cid/telefoniya-yealink/"
+                                       },
+                                       {
+                                           "name":  "Yeastar",
+                                           "url":  "/catalog/cid/telefoniya-yeastar/"
+                                       },
+                                       {
+                                           "name":  "Fanvil",
+                                           "url":  "/catalog/cid/telefoniya-fanvil/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Системы оповещения и музыкальной трансляции",
+                           "url":  "/catalog/cid/sistemy_opoveshcheniya_i_muzykalnoj_translyatsii/",
+                           "icon":  "/files/flib/10692.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Sonar",
+                                           "url":  "/catalog/cid/sonar/"
+                                       },
+                                       {
+                                           "name":  "Inter-M",
+                                           "url":  "/catalog/cid/inter-m_1/"
+                                       },
+                                       {
+                                           "name":  "Рокот",
+                                           "url":  "/catalog/cid/rokot_1/"
+                                       },
+                                       {
+                                           "name":  "Ария",
+                                           "url":  "/catalog/cid/ariya_1/"
+                                       },
+                                       {
+                                           "name":  "Полисервис",
+                                           "url":  "/catalog/cid/poliservis/"
+                                       },
+                                       {
+                                           "name":  "Сибирский Арсенал",
+                                           "url":  "/catalog/cid/sibirskij_arsenal3/"
+                                       },
+                                       {
+                                           "name":  "Риэлта",
+                                           "url":  "/catalog/cid/rielta1/"
+                                       },
+                                       {
+                                           "name":  "Promix",
+                                           "url":  "/catalog/cid/promix/"
+                                       },
+                                       {
+                                           "name":  "Болид (ОРИОН)",
+                                           "url":  "/catalog/cid/bolid_orion/"
+                                       },
+                                       {
+                                           "name":  "ТРОМБОН",
+                                           "url":  "/catalog/cid/trombon/"
+                                       },
+                                       {
+                                           "name":  "Hikvision",
+                                           "url":  "/catalog/cid/hikvision3/"
+                                       },
+                                       {
+                                           "name":  "Защитные кожухи",
+                                           "url":  "/catalog/cid/sistemy-opovescheniya-i-muzykalnoy-translyatsii-zaschitnyye-kozhukhi/"
+                                       },
+                                       {
+                                           "name":  "Радий",
+                                           "url":  "/catalog/cid/sistemy-opovescheniya-i-muzykalnoy-translyatsii-radiy/"
+                                       },
+                                       {
+                                           "name":  "Tantos",
+                                           "url":  "/catalog/cid/tantos/"
+                                       },
+                                       {
+                                           "name":  "PASystem",
+                                           "url":  "/catalog/cid/pasystem/"
+                                       },
+                                       {
+                                           "name":  "Stelberry",
+                                           "url":  "/catalog/cid/stelberry/"
+                                       },
+                                       {
+                                           "name":  "SLT",
+                                           "url":  "/catalog/cid/slt/"
+                                       },
+                                       {
+                                           "name":  "ВИСТЛ",
+                                           "url":  "/catalog/cid/vistl/"
+                                       },
+                                       {
+                                           "name":  "iFlow",
+                                           "url":  "/catalog/cid/iflow/"
+                                       },
+                                       {
+                                           "name":  "Арсенал Безопасности",
+                                           "url":  "/catalog/cid/arsenal-bezopasnosti/"
+                                       },
+                                       {
+                                           "name":  "Fanvil",
+                                           "url":  "/catalog/cid/fanvil/"
+                                       },
+                                       {
+                                           "name":  "Alerto",
+                                           "url":  "/catalog/cid/3094/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Шлагбаумы и автоматика",
+                           "url":  "/catalog/cid/shlagbaumy_i_avtomatika/",
+                           "icon":  "/files/flib/10695.png",
+                           "sub":  [
+                                       {
+                                           "name":  "CAME",
+                                           "url":  "/catalog/cid/came_1/"
+                                       },
+                                       {
+                                           "name":  "AN-Motors",
+                                           "url":  "/catalog/cid/an-motors_1/"
+                                       },
+                                       {
+                                           "name":  "CARDDEX",
+                                           "url":  "/catalog/cid/shlagbaumy_i_avtomatika_carddex/"
+                                       },
+                                       {
+                                           "name":  "DOORHAN",
+                                           "url":  "/catalog/cid/doorhan_1/"
+                                       },
+                                       {
+                                           "name":  "ALUTECH",
+                                           "url":  "/catalog/cid/alutech_1/"
+                                       },
+                                       {
+                                           "name":  "Zkteco",
+                                           "url":  "/catalog/cid/zkteco1/"
+                                       },
+                                       {
+                                           "name":  "Smartec",
+                                           "url":  "/catalog/cid/smartec2/"
+                                       },
+                                       {
+                                           "name":  "Блокпост",
+                                           "url":  "/catalog/cid/2280/"
+                                       },
+                                       {
+                                           "name":  "PERCo",
+                                           "url":  "/catalog/cid/shlagbaumy_i_avtomatika_perco/"
+                                       },
+                                       {
+                                           "name":  "Hiwatch Автоматика",
+                                           "url":  "/catalog/cid/hiwatch-avtomatika/"
+                                       },
+                                       {
+                                           "name":  "ENTERCAM",
+                                           "url":  "/catalog/cid/entercam/"
+                                       },
+                                       {
+                                           "name":  "iFlow",
+                                           "url":  "/catalog/cid/shlagbaumy-i-avtomatika-iflow/"
+                                       },
+                                       {
+                                           "name":  "Dahua",
+                                           "url":  "/catalog/cid/2826/"
+                                       },
+                                       {
+                                           "name":  "Hikvision",
+                                           "url":  "/catalog/cid/3051/"
+                                       },
+                                       {
+                                           "name":  "Temid",
+                                           "url":  "/catalog/cid/3063/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Системы пожаротушения",
+                           "url":  "/catalog/cid/sistemy_pozharotusheniya/",
+                           "icon":  "/files/flib/10693.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Приборы управления",
+                                           "url":  "/catalog/cid/pribory_upravleniya/"
+                                       },
+                                       {
+                                           "name":  "Модули пожаротушения (МПП)",
+                                           "url":  "/catalog/cid/moduli_pozharotusheniya_mpp/"
+                                       },
+                                       {
+                                           "name":  "Огнетушители",
+                                           "url":  "/catalog/cid/ognetushiteli/"
+                                       },
+                                       {
+                                           "name":  "Огнезащита",
+                                           "url":  "/catalog/cid/ognezashchita/"
+                                       },
+                                       {
+                                           "name":  "Пожарные шкафы",
+                                           "url":  "/catalog/cid/2978/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Взрывозащищённое оборудование",
+                           "url":  "/catalog/cid/vzryvozashchishchyonnoe_oborudovanie/",
+                           "icon":  "/files/flib/10682.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Спектрон",
+                                           "url":  "/catalog/cid/spektron/"
+                                       },
+                                       {
+                                           "name":  "Риэлта",
+                                           "url":  "/catalog/cid/riehlta/"
+                                       },
+                                       {
+                                           "name":  "Магнито-Контакт",
+                                           "url":  "/catalog/cid/magnito-kontakt/"
+                                       },
+                                       {
+                                           "name":  "Болид",
+                                           "url":  "/catalog/cid/2830/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Инструмент",
+                           "url":  "/catalog/cid/instrument/",
+                           "icon":  "/files/flib/10685.png",
+                           "sub":  [
+
+                                   ]
+                       },
+                       {
+                           "name":  "Видеоконференцсвязь (ВКС)",
+                           "url":  "/catalog/cid/videokonferentssvyaz_vks/",
+                           "icon":  "/files/flib/10683.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Yealink",
+                                           "url":  "/catalog/cid/yealink/"
+                                       },
+                                       {
+                                           "name":  "Fanvil",
+                                           "url":  "/catalog/cid/2964/"
+                                       }
+                                   ]
+                       },
+                       {
+                           "name":  "Светотехника",
+                           "url":  "/catalog/cid/svetotehnika/",
+                           "icon":  "/files/flib/10690.png",
+                           "sub":  [
+                                       {
+                                           "name":  "Светильники аварийного освещения",
+                                           "url":  "/catalog/cid/2965/"
+                                       }
+                                   ]
+                       }
+                   ]
+}

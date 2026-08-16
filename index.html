@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ПРОТЭК — профессиональные технологии безопасности</title>
+<meta name="description" content="Видеонаблюдение, СКУД, охранно-пожарная сигнализация, источники питания, сетевое оборудование. Склады в Новосибирске, Барнауле, Кемерове, Новокузнецке, Томске и Красноярске.">
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <span class="hero-eyebrow" id="hero-badge"></span>
+          <h1>Видеонаблюдение и <em>системы безопасности</em></h1>
+          <p>Оптовые поставки оборудования для видеонаблюдения, СКУД, охранно-пожарной сигнализации и инженерных систем. Наличие на складах видно сразу — по каждому городу.</p>
+          <div class="hero-cta">
+            <a class="btn btn-accent btn-lg" href="catalog.html">Открыть каталог</a>
+            <a class="btn btn-ghost btn-lg" href="contacts.html">Связаться с менеджером</a>
+          </div>
+          <div class="hero-stats" id="hero-stats"></div>
+          <img class="hero-shot hero-shot-1" src="assets/img/hero/81595.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="hero-side">
+          <a class="promo promo-1" href="catalog.html?cat=novinki">
+            <div><h3>Новинки</h3><p>Свежие поступления в каталоге</p></div>
+            <span class="lnk">Смотреть →</span>
+            <img class="promo-shot" src="assets/img/hero/14975.png" alt="" aria-hidden="true">
+          </a>
+          <a class="promo promo-2" href="catalog.html?cat=rasprodazha">
+            <div><h3>Распродажа</h3><p>Позиции по сниженным ценам</p></div>
+            <span class="lnk">Смотреть →</span>
+            <img class="promo-shot" src="assets/img/hero/52224.png" alt="" aria-hidden="true">
+          </a>
+        </div>
+      </div>
+
+      <div class="usp" id="usp"></div>
+    </div>
+  </section>
+
+  <!-- КАТЕГОРИИ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Каталог</h2>
+          <p id="cats-sub"></p>
+        </div>
+        <a class="more" href="catalog.html">Весь каталог →</a>
+      </div>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <!-- НОВИНКИ -->
+  <section class="section section-sunk" id="sec-new">
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Новинки</h2><p>Недавно появились в каталоге</p></div>
+        <a class="more" href="catalog.html?cat=novinki">Все новинки →</a>
+      </div>
+      <div class="grid-products" id="grid-new"></div>
+    </div>
+  </section>
+
+  <!-- РАСПРОДАЖА -->
+  <section class="section" id="sec-sale">
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Распродажа</h2><p>Ограниченные остатки по сниженной цене</p></div>
+        <a class="more" href="catalog.html?cat=rasprodazha">Вся распродажа →</a>
+      </div>
+      <div class="grid-products" id="grid-sale"></div>
+    </div>
+  </section>
+
+  <!-- СКЛАДЫ -->
+  <section class="section section-sunk">
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Склады</h2><p>Наличие в карточке товара показывается отдельно по каждому складу</p></div>
+      </div>
+      <div class="cats" id="stores"></div>
+    </div>
+  </section>
+
+  <!-- ПОДДЕРЖКА -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div><h2>Поддержка</h2><p>Разделы помощи с действующего сайта</p></div>
+      </div>
+      <div class="services" id="support"></div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const subCount = CATEGORIES.reduce((a, c) => a + c.sub.length, 0);
+
+  document.getElementById('hero-badge').innerHTML =
+    `<span class="dot"></span> ${PRODUCTS.length} ${plural(PRODUCTS.length,'товар','товара','товаров')} · ${CITIES.length} складов`;
+
+  document.getElementById('hero-stats').innerHTML = [
+    [CATEGORIES.length, plural(CATEGORIES.length,'раздел','раздела','разделов') + ' каталога'],
+    [subCount, plural(subCount,'подраздел','подраздела','подразделов')],
+    [CITIES.length, 'города со складами']
+  ].map(s => `<div><b>${s[0]}</b><span>${s[1]}</span></div>`).join('');
+
+  document.getElementById('usp').innerHTML = [
+    ['box','Наличие по складам','Видно в каждой карточке'],
+    ['truck','Доставка по России','Из Новосибирска и филиалов'],
+    ['headset','Технический отдел','Инженеры и сервисный центр'],
+    ['cert','Гарантия','Собственный сервисный центр']
+  ].map(u => `<div class="usp-card"><span class="ic">${icon(u[0])}</span><span><b>${u[1]}</b><span>${u[2]}</span></span></div>`).join('');
+
+  document.getElementById('cats-sub').textContent =
+    `${CATEGORIES.length} ${plural(CATEGORIES.length,'раздел','раздела','разделов')}, ${subCount} ${plural(subCount,'подраздел','подраздела','подразделов')}`;
+
+  document.getElementById('cats').innerHTML = CATEGORIES.map(c => `
+    <a class="cat-tile" href="catalog.html?cat=${c.id}">
+      <span class="ic">${c.icon ? `<img class="cat-ic-lg" src="${catIcon(c.icon)}" alt="" loading="lazy">` : icon('grid')}</span>
+      <b>${c.name}</b>
+      <span>${c.sub.length ? c.sub.length + ' ' + plural(c.sub.length,'подраздел','подраздела','подразделов') : 'Раздел'}</span>
+    </a>`).join('');
+
+  /* блоки товаров из реальных разделов «Новинки» и «Распродажа» */
+  const byCat = id => {
+    const c = CATEGORIES.find(x => x.id === id);
+    if (!c) return [];
+    const ids = new Set(c.ids);
+    c.sub.forEach(s => s.ids.forEach(i => ids.add(i)));
+    return [...ids].map(i => PMAP[i]).filter(Boolean);
+  };
+  /* на витрину выводим в первую очередь позиции с фотографией */
+  const withPhotoFirst = list => list.slice().sort((a, b) => (b.img ? 1 : 0) - (a.img ? 1 : 0));
+
+  const fill = (secId, gridId, list) => {
+    const items = withPhotoFirst(list).slice(0, 5);
+    if (!items.length) { document.getElementById(secId).style.display = 'none'; return; }
+    document.getElementById(gridId).innerHTML = items.map(productCard).join('');
+  };
+  const newItems = byCat('novinki'), saleItems = byCat('rasprodazha');
+  fill('sec-new','grid-new', newItems);
+  fill('sec-sale','grid-sale', saleItems);
+
+
+  document.getElementById('stores').innerHTML = CITIES.map(c => {
+    const n = PRODUCTS.filter(p => p.s && p.s[CITIES.indexOf(c)]).length;
+    return `<div class="cat-tile"><span class="ic">${icon('pin')}</span><b>${c}</b>
+      <span>${n} ${plural(n,'позиция','позиции','позиций')} в наличии</span></div>`;
+  }).join('');
+
+  const sup = (typeof MENU !== 'undefined' ? MENU : []).find(m => m.url === '/support/');
+  const supItems = sup && sup.sub.length ? sup.sub : [];
+  document.getElementById('support').innerHTML = supItems.map(s =>
+    `<a class="svc" href="${pageFor(s.url)}"><span class="ic">${icon('headset')}</span>
+      <h3>${s.name}</h3><span class="lnk">Перейти →</span></a>`).join('')
+    || `<a class="svc" href="support.html"><span class="ic">${icon('headset')}</span><h3>Поддержка</h3><span class="lnk">Перейти →</span></a>`;
+};
+</script>
+</body>
+</html>

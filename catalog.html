@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs" id="crumbs"></nav>
+  <h1 id="page-title" style="font-size:30px;margin-bottom:6px">Каталог</h1>
+  <p class="muted" id="page-sub" style="margin-bottom:18px"></p>
+
+  <div class="subnav" id="subnav"></div>
+
+  <div class="catalog-layout">
+    <aside class="filters" id="filters">
+      <div class="fgroup">
+        <h4>Цена, ₽ <button id="f-reset">сбросить</button></h4>
+        <div class="range">
+          <input type="number" id="f-min" placeholder="от">
+          <input type="number" id="f-max" placeholder="до">
+        </div>
+      </div>
+      <div class="fgroup"><h4>Наличие на складе</h4><div id="f-city"></div></div>
+      <div class="fgroup"><h4>Производитель</h4><div id="f-brand" class="scroll-box"></div></div>
+      <div class="fgroup"><h4>Раздел</h4><div id="f-cat" class="scroll-box"></div></div>
+    </aside>
+
+    <section>
+      <div class="toolbar">
+        <button class="btn btn-ghost btn-sm filters-toggle" id="ftoggle">Фильтры</button>
+        <span class="found" id="found"></span>
+        <div class="right">
+          <span class="muted" style="font-size:13.5px">Сортировка</span>
+          <select id="sort">
+            <option value="avail">Сначала в наличии</option>
+            <option value="asc">Сначала дешёвые</option>
+            <option value="desc">Сначала дорогие</option>
+            <option value="name">По названию</option>
+          </select>
+        </div>
+      </div>
+      <div class="applied" id="applied"></div>
+      <div class="grid-products" id="grid"></div>
+      <div class="pager" id="pager"></div>
+    </section>
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const qs = new URLSearchParams(location.search);
+  const state = {
+    q: qs.get('q') || '',
+    cat: qs.get('cat') || '',
+    sub: qs.get('sub') || '',
+    fav: qs.get('fav') === '1',
+    cities: new Set(),
+    brands: new Set(qs.get('brand') ? [qs.get('brand')] : []),
+    min: null, max: null, sort: 'avail', page: 1
+  };
+  const PER = 24;
+
+  /* ---------- базовый набор ---------- */
+  function baseList() {
+    if (state.fav) return store.fav.map(i => PMAP[i]).filter(Boolean);
+    const c = CATEGORIES.find(x => x.id === state.cat);
+    if (!c) return PRODUCTS.slice();
+    if (state.sub) {
+      const s = c.sub.find(x => x.id === state.sub);
+      return s ? s.ids.map(i => PMAP[i]).filter(Boolean) : [];
+    }
+    const ids = new Set(c.ids);
+    c.sub.forEach(s => s.ids.forEach(i => ids.add(i)));
+    return [...ids].map(i => PMAP[i]).filter(Boolean);
+  }
+
+  /* ---------- фильтры ---------- */
+  const cb = (name, val, label, on, cnt) =>
+    `<label class="check"><input type="checkbox" data-f="${name}" value="${val}" ${on ? 'checked' : ''}>
+      <span>${label}</span>${cnt != null ? `<span class="cnt">${cnt}</span>` : ''}</label>`;
+
+  document.getElementById('f-city').innerHTML = CITIES.map((c, i) =>
+    cb('cities', String(i), c, false, PRODUCTS.filter(p => p.s && p.s[i]).length)).join('');
+
+  const brandCount = {};
+  PRODUCTS.forEach(p => brandCount[p.b] = (brandCount[p.b] || 0) + 1);
+  const brands = Object.keys(brandCount).sort((a, b) => brandCount[b] - brandCount[a]);
+  document.getElementById('f-brand').innerHTML = brands.map(b =>
+    cb('brands', b, b, state.brands.has(b), brandCount[b])).join('');
+
+  document.getElementById('f-cat').innerHTML = CATEGORIES.map(c =>
+    `<a class="f-cat-link ${c.id === state.cat ? 'on' : ''}" href="catalog.html?cat=${c.id}">${c.name}</a>`).join('');
+
+  document.getElementById('filters').addEventListener('change', e => {
+    const f = e.target.dataset.f; if (!f) return;
+    state[f][e.target.checked ? 'add' : 'delete'](e.target.value);
+    state.page = 1; render();
+  });
+  ['f-min', 'f-max'].forEach(id => document.getElementById(id).addEventListener('input', e => {
+    state[id === 'f-min' ? 'min' : 'max'] = e.target.value ? +e.target.value : null;
+    state.page = 1; render();
+  }));
+  document.getElementById('f-reset').addEventListener('click', () => {
+    state.cities.clear(); state.brands.clear(); state.min = state.max = null; state.q = '';
+    document.querySelectorAll('#filters input').forEach(i => i.type === 'number' ? i.value = '' : i.checked = false);
+    state.page = 1; render();
+  });
+  document.getElementById('sort').addEventListener('change', e => { state.sort = e.target.value; state.page = 1; render(); });
+  document.getElementById('ftoggle').addEventListener('click', () => document.getElementById('filters').classList.toggle('open'));
+
+  /* ---------- отрисовка ---------- */
+  function render() {
+    let list = baseList().filter(p => {
+      if (state.q && !(p.n + ' ' + p.b).toLowerCase().includes(state.q.toLowerCase())) return false;
+      if (state.brands.size && !state.brands.has(p.b)) return false;
+      if (state.min != null && (!hasPrice(p) || p.p < state.min)) return false;
+      if (state.max != null && (!hasPrice(p) || p.p > state.max)) return false;
+      for (const i of state.cities) if (!(p.s && p.s[+i])) return false;
+      return true;
+    });
+
+    const s = state.sort;
+    list.sort((a, b) =>
+      s === 'asc' ? (hasPrice(a) ? a.p : 1e12) - (hasPrice(b) ? b.p : 1e12) :
+      s === 'desc' ? (hasPrice(b) ? b.p : -1) - (hasPrice(a) ? a.p : -1) :
+      s === 'name' ? a.n.localeCompare(b.n, 'ru') :
+      stockCount(b) - stockCount(a));
+
+    document.getElementById('found').textContent =
+      list.length ? `${list.length} ${plural(list.length, 'товар', 'товара', 'товаров')}` : '';
+
+    const pages = Math.max(1, Math.ceil(list.length / PER));
+    if (state.page > pages) state.page = 1;
+    const slice = list.slice((state.page - 1) * PER, state.page * PER);
+
+    document.getElementById('grid').innerHTML = slice.length
+      ? slice.map(productCard).join('')
+      : `<div class="empty-state" style="grid-column:1/-1">${icon('search')}
+          <h3>Ничего не найдено</h3><p style="margin-top:8px">Смягчите фильтры или напишите менеджеру.</p></div>`;
+
+    document.getElementById('pager').innerHTML = pages > 1
+      ? Array.from({ length: pages }, (_, i) =>
+          `<button class="pg ${i + 1 === state.page ? 'on' : ''}" data-p="${i + 1}">${i + 1}</button>`).join('')
+      : '';
+
+    /* чипы */
+    const chips = [];
+    if (state.q) chips.push(['q', '«' + state.q + '»']);
+    if (state.fav) chips.push(['fav', 'Избранное']);
+    state.cities.forEach(i => chips.push(['cities:' + i, 'В наличии: ' + CITIES[+i]]));
+    state.brands.forEach(b => chips.push(['brands:' + b, b]));
+    if (state.min != null) chips.push(['min', 'от ' + state.min + ' ₽']);
+    if (state.max != null) chips.push(['max', 'до ' + state.max + ' ₽']);
+    document.getElementById('applied').innerHTML = chips.map(c => `<span class="chip" data-x="${c[0]}">${c[1]} ✕</span>`).join('');
+
+    /* заголовки */
+    const c = CATEGORIES.find(x => x.id === state.cat);
+    const sub = c && state.sub ? c.sub.find(x => x.id === state.sub) : null;
+    const title = state.fav ? 'Избранное' : state.q ? 'Поиск: ' + state.q : (sub ? sub.name : c ? c.name : 'Каталог');
+    document.getElementById('page-title').textContent = title;
+    document.getElementById('page-sub').textContent = c && !sub
+      ? `${c.sub.length} ${plural(c.sub.length, 'подраздел', 'подраздела', 'подразделов')}`
+      : (c ? c.name : `${CATEGORIES.length} ${plural(CATEGORIES.length,'раздел','раздела','разделов')} каталога`);
+
+    document.getElementById('crumbs').innerHTML =
+      `<a href="index.html">Главная</a><span class="sep">/</span>` +
+      (c ? `<a href="catalog.html">Каталог</a><span class="sep">/</span>` +
+           (sub ? `<a href="catalog.html?cat=${c.id}">${c.name}</a><span class="sep">/</span><span>${sub.name}</span>`
+                : `<span>${c.name}</span>`)
+         : `<span>${title}</span>`);
+
+    /* подразделы */
+    document.getElementById('subnav').innerHTML = c && c.sub.length
+      ? c.sub.map(s => `<a class="sn ${s.id === state.sub ? 'on' : ''}" href="catalog.html?cat=${c.id}&sub=${s.id}">${s.name}
+          <b>${s.ids.length}</b></a>`).join('')
+      : '';
+  }
+
+  document.getElementById('pager').addEventListener('click', e => {
+    const b = e.target.closest('[data-p]'); if (!b) return;
+    state.page = +b.dataset.p; render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('applied').addEventListener('click', e => {
+    const chip = e.target.closest('[data-x]'); if (!chip) return;
+    const [k, v] = chip.dataset.x.split(':');
+    if (v !== undefined) state[k].delete(v);
+    else if (k === 'q') state.q = '';
+    else if (k === 'fav') { state.fav = false; }
+    else state[k] = null;
+    document.querySelectorAll('#filters input').forEach(i => {
+      if (i.type === 'checkbox' && i.value === v) i.checked = false;
+      if (i.type === 'number' && ((k === 'min' && i.id === 'f-min') || (k === 'max' && i.id === 'f-max'))) i.value = '';
+    });
+    state.page = 1; render();
+  });
+
+  window.PAGE_REFRESH = render;
+  render();
+};
+</script>
+</body>
+</html>

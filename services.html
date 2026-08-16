@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Услуги: проектирование, монтаж, сервис — PROTECH</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <div class="wrap">
+    <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>Услуги</span></nav>
+    <h1 style="font-size:36px;margin-bottom:10px">Инженерные услуги</h1>
+    <p class="muted" style="max-width:70ch;margin-bottom:26px">Мы закрываем весь цикл: расчёт конфигурации, рабочая документация, поставка, монтаж, пусконаладка и сервисное сопровождение. Можно взять любой этап отдельно.</p>
+  </div>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap"><div class="services" id="svc"></div></div>
+  </section>
+
+  <section class="section section-sunk">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Сколько это стоит</h2>
+        <p>Ориентировочные цены. Точная смета — после осмотра объекта или изучения планировок.</p></div></div>
+      <div class="grid-products" id="price"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="b2b">
+        <div class="b2b-l">
+          <h2>Бесплатный расчёт проекта за 1 рабочий день</h2>
+          <p>Пришлите планировку, техзадание или опишите задачу словами — инженер соберёт спецификацию с ценами и вариантами по бюджету.</p>
+          <ul class="b2b-list">
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Два-три варианта конфигурации: базовый, оптимальный, премиум</li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Расчёт кабельных трасс, питания и бюджета PoE</li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 12.5l5 5L20 6.5"/></svg> Спецификация в Excel, готовая к согласованию</li>
+          </ul>
+        </div>
+        <form class="b2b-r" id="f">
+          <h3>Заявка на расчёт</h3>
+          <div class="field"><label>Имя</label><input required placeholder="Как к вам обращаться"></div>
+          <div class="field"><label>Телефон</label><input required type="tel" placeholder="+7 (___) ___-__-__"></div>
+          <div class="field"><label>Тип объекта</label>
+            <select><option>Офис / бизнес-центр</option><option>Производство</option><option>Склад / логистика</option>
+            <option>Жилой комплекс</option><option>Ритейл</option><option>Другое</option></select></div>
+          <button class="btn btn-accent btn-lg btn-block">Получить расчёт</button>
+          <small>Ответим в рабочее время, обычно в течение часа</small>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const all = SERVICES.concat([
+    { icon:'headset', t:'Техническая поддержка', d:'Горячая линия инженеров с 8:00 до 20:00 по Новосибирску. Удалённое подключение, помощь с прошивками и настройкой интеграций.', l:'Написать в поддержку' },
+    { icon:'blueprint', t:'Аудит существующей системы', d:'Выезд инженера, проверка работоспособности, отчёт с перечнем проблем и планом модернизации без замены всего парка.', l:'Заказать аудит' },
+    { icon:'cert', t:'Обучение и вебинары', d:'Практические курсы по видеоаналитике, СКУД и адресным системам ОПС. Сертификат вендора по итогам обучения.', l:'Расписание курсов' }
+  ]);
+  document.getElementById('svc').innerHTML = all.map(s =>
+    `<div class="svc"><span class="ic">${icon(s.icon)}</span><h3>${s.t}</h3><p>${s.d}</p><span class="lnk">${s.l} →</span></div>`).join('');
+
+  const price = [
+    ['blueprint','Проект системы видеонаблюдения','от 90 ₽ / м²'],
+    ['camera','Монтаж и настройка IP-камеры','от 2 500 ₽ / шт.'],
+    ['lock','Монтаж точки прохода СКУД','от 7 800 ₽ / дверь'],
+    ['fire','Монтаж АПС','от 260 ₽ / м²'],
+    ['cable','Прокладка СКС','от 110 ₽ / м'],
+    ['wrench','Выезд инженера на диагностику','от 3 000 ₽']
+  ];
+  document.getElementById('price').innerHTML = price.map(p =>
+    `<div class="card"><div class="card-media">${icon(p[0],'')}</div>
+      <h3 class="card-title">${p[1]}</h3>
+      <div class="price" style="margin-top:auto"><b style="font-size:18px">${p[2]}</b></div>
+      <a class="btn btn-soft btn-sm btn-block" style="margin-top:10px" href="contacts.html">Заказать</a></div>`).join('');
+
+  document.getElementById('f').addEventListener('submit', e => {
+    e.preventDefault(); e.target.reset(); toast('Заявка принята — инженер свяжется с вами');
+  });
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,1643 @@
+﻿{
+    "fetchedAt":  "2026-08-16 15:11",
+    "brands":  [
+                   {
+                       "slug":  "3v",
+                       "name":  "3V",
+                       "count":  253,
+                       "url":  "/catalog/brends/bid/3v/",
+                       "logo":  "assets/img/brands/3v.png"
+                   },
+                   {
+                       "slug":  "abb",
+                       "name":  "ABB",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/abb/",
+                       "logo":  "assets/img/brands/abb.png"
+                   },
+                   {
+                       "slug":  "accordtec",
+                       "name":  "AccordTec",
+                       "count":  377,
+                       "url":  "/catalog/brends/bid/accordtec/",
+                       "logo":  "assets/img/brands/accordtec.jpg"
+                   },
+                   {
+                       "slug":  "akuvox",
+                       "name":  "Akuvox",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/akuvox/",
+                       "logo":  "assets/img/brands/akuvox.png"
+                   },
+                   {
+                       "slug":  "aleko",
+                       "name":  "ALeko",
+                       "count":  513,
+                       "url":  "/catalog/brends/bid/aleko/",
+                       "logo":  "assets/img/brands/aleko.png"
+                   },
+                   {
+                       "slug":  "aler",
+                       "name":  "ALer",
+                       "count":  92,
+                       "url":  "/catalog/brends/bid/aler/",
+                       "logo":  "assets/img/brands/aler.png"
+                   },
+                   {
+                       "slug":  "alerto",
+                       "name":  "Alerto",
+                       "count":  38,
+                       "url":  "/catalog/brends/bid/alerto/",
+                       "logo":  "assets/img/brands/alerto.png"
+                   },
+                   {
+                       "slug":  "alutech",
+                       "name":  "ALUTECH",
+                       "count":  135,
+                       "url":  "/catalog/brends/bid/alutech/",
+                       "logo":  "assets/img/brands/alutech.jpg"
+                   },
+                   {
+                       "slug":  "an-motors",
+                       "name":  "AN-Motors",
+                       "count":  44,
+                       "url":  "/catalog/brends/bid/an-motors/",
+                       "logo":  "assets/img/brands/an-motors.jpg"
+                   },
+                   {
+                       "slug":  "aoc",
+                       "name":  "AOC",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/aoc/",
+                       "logo":  "assets/img/brands/aoc.png"
+                   },
+                   {
+                       "slug":  "arctic-line",
+                       "name":  "Arctic Line",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/arctic-line/",
+                       "logo":  "assets/img/brands/arctic-line.jpg"
+                   },
+                   {
+                       "slug":  "asterion",
+                       "name":  "Asterion",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/asterion/",
+                       "logo":  "assets/img/brands/asterion.png"
+                   },
+                   {
+                       "slug":  "battbee",
+                       "name":  "Battbee",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/battbee/",
+                       "logo":  "assets/img/brands/battbee.png"
+                   },
+                   {
+                       "slug":  "beward",
+                       "name":  "Beward",
+                       "count":  430,
+                       "url":  "/catalog/brends/bid/beward/",
+                       "logo":  "assets/img/brands/beward.png"
+                   },
+                   {
+                       "slug":  "buro",
+                       "name":  "Buro",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/buro/",
+                       "logo":  "assets/img/brands/buro.png"
+                   },
+                   {
+                       "slug":  "cabeus",
+                       "name":  "Cabeus",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/cabeus/",
+                       "logo":  "assets/img/brands/cabeus.png"
+                   },
+                   {
+                       "slug":  "cablexpert",
+                       "name":  "Cablexpert",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/cablexpert/",
+                       "logo":  "assets/img/brands/cablexpert.png"
+                   },
+                   {
+                       "slug":  "cadena",
+                       "name":  "CADENA",
+                       "count":  7,
+                       "url":  "/catalog/brends/bid/cadena/",
+                       "logo":  "assets/img/brands/cadena.jpg"
+                   },
+                   {
+                       "slug":  "cambox",
+                       "name":  "CamBox",
+                       "count":  118,
+                       "url":  "/catalog/brends/bid/cambox/",
+                       "logo":  "assets/img/brands/cambox.jpg"
+                   },
+                   {
+                       "slug":  "came",
+                       "name":  "CAME",
+                       "count":  377,
+                       "url":  "/catalog/brends/bid/came/",
+                       "logo":  "assets/img/brands/came.png"
+                   },
+                   {
+                       "slug":  "carddex",
+                       "name":  "CARDDEX",
+                       "count":  190,
+                       "url":  "/catalog/brends/bid/carddex/",
+                       "logo":  "assets/img/brands/carddex.jpg"
+                   },
+                   {
+                       "slug":  "carvis",
+                       "name":  "CARVIS",
+                       "count":  116,
+                       "url":  "/catalog/brends/bid/carvis/",
+                       "logo":  "assets/img/brands/carvis.png"
+                   },
+                   {
+                       "slug":  "crow",
+                       "name":  "Crow",
+                       "count":  3,
+                       "url":  "/catalog/brends/bid/crow/",
+                       "logo":  "assets/img/brands/crow.jpg"
+                   },
+                   {
+                       "slug":  "dahua",
+                       "name":  "Dahua",
+                       "count":  1865,
+                       "url":  "/catalog/brends/bid/dahua/",
+                       "logo":  "assets/img/brands/dahua.png"
+                   },
+                   {
+                       "slug":  "dahua-project",
+                       "name":  "Dahua (project)",
+                       "count":  1200,
+                       "url":  "/catalog/brends/bid/dahua-project/",
+                       "logo":  "assets/img/brands/dahua-project.png"
+                   },
+                   {
+                       "slug":  "datarex",
+                       "name":  "Datarex",
+                       "count":  1373,
+                       "url":  "/catalog/brends/bid/datarex/",
+                       "logo":  "assets/img/brands/datarex.png"
+                   },
+                   {
+                       "slug":  "delta",
+                       "name":  "DELTA",
+                       "count":  270,
+                       "url":  "/catalog/brends/bid/delta/",
+                       "logo":  "assets/img/brands/delta.png"
+                   },
+                   {
+                       "slug":  "dexp",
+                       "name":  "DEXP",
+                       "count":  4,
+                       "url":  "/catalog/brends/bid/dexp/",
+                       "logo":  "assets/img/brands/dexp.png"
+                   },
+                   {
+                       "slug":  "dkc",
+                       "name":  "DKC",
+                       "count":  7646,
+                       "url":  "/catalog/brends/bid/dkc/",
+                       "logo":  "assets/img/brands/dkc.jpg"
+                   },
+                   {
+                       "slug":  "doorhan",
+                       "name":  "DOORHAN",
+                       "count":  256,
+                       "url":  "/catalog/brends/bid/doorhan/",
+                       "logo":  "assets/img/brands/doorhan.png"
+                   },
+                   {
+                       "slug":  "el",
+                       "name":  "EL",
+                       "count":  32,
+                       "url":  "/catalog/brends/bid/el/",
+                       "logo":  "assets/img/brands/el.png"
+                   },
+                   {
+                       "slug":  "entercam",
+                       "name":  "ENTERCAM",
+                       "count":  30,
+                       "url":  "/catalog/brends/bid/entercam/",
+                       "logo":  "assets/img/brands/entercam.png"
+                   },
+                   {
+                       "slug":  "esmart",
+                       "name":  "ESMART",
+                       "count":  44,
+                       "url":  "/catalog/brends/bid/esmart/",
+                       "logo":  "assets/img/brands/esmart.jpg"
+                   },
+                   {
+                       "slug":  "etalon",
+                       "name":  "ETALON",
+                       "count":  44,
+                       "url":  "/catalog/brends/bid/etalon/",
+                       "logo":  "assets/img/brands/etalon.png"
+                   },
+                   {
+                       "slug":  "exegate",
+                       "name":  "ExeGate",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/exegate/",
+                       "logo":  "assets/img/brands/exegate.png"
+                   },
+                   {
+                       "slug":  "ezviz",
+                       "name":  "Ezviz",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/ezviz/",
+                       "logo":  "assets/img/brands/ezviz.png"
+                   },
+                   {
+                       "slug":  "fanvil",
+                       "name":  "Fanvil",
+                       "count":  113,
+                       "url":  "/catalog/brends/bid/fanvil/",
+                       "logo":  "assets/img/brands/fanvil.png"
+                   },
+                   {
+                       "slug":  "faraday",
+                       "name":  "FARADAY",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/faraday/",
+                       "logo":  "assets/img/brands/faraday.png"
+                   },
+                   {
+                       "slug":  "fedast",
+                       "name":  "FEDAST",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/fedast/",
+                       "logo":  "assets/img/brands/fedast.png"
+                   },
+                   {
+                       "slug":  "forteza",
+                       "name":  "Forteza",
+                       "count":  377,
+                       "url":  "/catalog/brends/bid/forteza/",
+                       "logo":  "assets/img/brands/forteza.png"
+                   },
+                   {
+                       "slug":  "fortisflex",
+                       "name":  "Fortisflex",
+                       "count":  122,
+                       "url":  "/catalog/brends/bid/fortisflex/",
+                       "logo":  "assets/img/brands/fortisflex.jpg"
+                   },
+                   {
+                       "slug":  "gembird",
+                       "name":  "Gembird",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/gembird/",
+                       "logo":  "assets/img/brands/gembird.png"
+                   },
+                   {
+                       "slug":  "gp-batteries",
+                       "name":  "GP Batteries",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/gp-batteries/",
+                       "logo":  "assets/img/brands/gp-batteries.png"
+                   },
+                   {
+                       "slug":  "gsn",
+                       "name":  "GSN",
+                       "count":  43,
+                       "url":  "/catalog/brends/bid/gsn/",
+                       "logo":  "assets/img/brands/gsn.png"
+                   },
+                   {
+                       "slug":  "gtvs",
+                       "name":  "GTVS",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/gtvs/",
+                       "logo":  "assets/img/brands/gtvs.png"
+                   },
+                   {
+                       "slug":  "hikvision",
+                       "name":  "Hikvision",
+                       "count":  838,
+                       "url":  "/catalog/brends/bid/hikvision/",
+                       "logo":  "assets/img/brands/hikvision.png"
+                   },
+                   {
+                       "slug":  "hikvision-project",
+                       "name":  "Hikvision (project)",
+                       "count":  441,
+                       "url":  "/catalog/brends/bid/hikvision-project/",
+                       "logo":  "assets/img/brands/hikvision-project.png"
+                   },
+                   {
+                       "slug":  "hikvision-ax-pro",
+                       "name":  "Hikvision AX PRO",
+                       "count":  100,
+                       "url":  "/catalog/brends/bid/hikvision-ax-pro/",
+                       "logo":  "assets/img/brands/hikvision-ax-pro.png"
+                   },
+                   {
+                       "slug":  "hiwatch",
+                       "name":  "HiWatch",
+                       "count":  221,
+                       "url":  "/catalog/brends/bid/hiwatch/",
+                       "logo":  "assets/img/brands/hiwatch.png"
+                   },
+                   {
+                       "slug":  "hiwatch-ecoline",
+                       "name":  "HiWatch Ecoline",
+                       "count":  7,
+                       "url":  "/catalog/brends/bid/hiwatch-ecoline/",
+                       "logo":  "assets/img/brands/hiwatch-ecoline.jpg"
+                   },
+                   {
+                       "slug":  "hiwatch-pro",
+                       "name":  "HiWatch Pro",
+                       "count":  39,
+                       "url":  "/catalog/brends/bid/hiwatch-pro/",
+                       "logo":  "assets/img/brands/hiwatch-pro.png"
+                   },
+                   {
+                       "slug":  "hiwatch-avtomatika",
+                       "name":  "Hiwatch Автоматика",
+                       "count":  11,
+                       "url":  "/catalog/brends/bid/hiwatch-avtomatika/",
+                       "logo":  "assets/img/brands/hiwatch-avtomatika.jpg"
+                   },
+                   {
+                       "slug":  "hyperline",
+                       "name":  "Hyperline",
+                       "count":  5,
+                       "url":  "/catalog/brends/bid/hyperline/",
+                       "logo":  "assets/img/brands/hyperline.png"
+                   },
+                   {
+                       "slug":  "idis",
+                       "name":  "IDIS",
+                       "count":  374,
+                       "url":  "/catalog/brends/bid/idis/",
+                       "logo":  "assets/img/brands/idis.png"
+                   },
+                   {
+                       "slug":  "iek",
+                       "name":  "IEK",
+                       "count":  1878,
+                       "url":  "/catalog/brends/bid/iek/",
+                       "logo":  "assets/img/brands/iek.png"
+                   },
+                   {
+                       "slug":  "iflow",
+                       "name":  "iFlow",
+                       "count":  481,
+                       "url":  "/catalog/brends/bid/iflow/",
+                       "logo":  "assets/img/brands/iflow.png"
+                   },
+                   {
+                       "slug":  "iflow-project",
+                       "name":  "iFlow (project)",
+                       "count":  208,
+                       "url":  "/catalog/brends/bid/iflow-project/",
+                       "logo":  "assets/img/brands/iflow-project.png"
+                   },
+                   {
+                       "slug":  "imou",
+                       "name":  "IMOU",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/imou/",
+                       "logo":  "assets/img/brands/imou.jpg"
+                   },
+                   {
+                       "slug":  "info-sys",
+                       "name":  "Info-Sys",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/info-sys/",
+                       "logo":  "assets/img/brands/info-sys.png"
+                   },
+                   {
+                       "slug":  "invamat",
+                       "name":  "INVAMAT",
+                       "count":  47,
+                       "url":  "/catalog/brends/bid/invamat/",
+                       "logo":  "assets/img/brands/invamat.png"
+                   },
+                   {
+                       "slug":  "ip-com",
+                       "name":  "IP-COM",
+                       "count":  82,
+                       "url":  "/catalog/brends/bid/ip-com/",
+                       "logo":  "assets/img/brands/ip-com.png"
+                   },
+                   {
+                       "slug":  "ippon",
+                       "name":  "Ippon",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ippon/",
+                       "logo":  "assets/img/brands/ippon.png"
+                   },
+                   {
+                       "slug":  "ironlogic",
+                       "name":  "IronLogic",
+                       "count":  175,
+                       "url":  "/catalog/brends/bid/ironlogic/",
+                       "logo":  "assets/img/brands/ironlogic.png"
+                   },
+                   {
+                       "slug":  "itv",
+                       "name":  "ITV",
+                       "count":  173,
+                       "url":  "/catalog/brends/bid/itv/",
+                       "logo":  "assets/img/brands/itv.png"
+                   },
+                   {
+                       "slug":  "kadron",
+                       "name":  "KadrON",
+                       "count":  7,
+                       "url":  "/catalog/brends/bid/kadron/",
+                       "logo":  "assets/img/brands/kadron.png"
+                   },
+                   {
+                       "slug":  "keenetic",
+                       "name":  "Keenetic",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/keenetic/",
+                       "logo":  "assets/img/brands/keenetic.png"
+                   },
+                   {
+                       "slug":  "kroks",
+                       "name":  "Kroks",
+                       "count":  223,
+                       "url":  "/catalog/brends/bid/kroks/",
+                       "logo":  "assets/img/brands/kroks.png"
+                   },
+                   {
+                       "slug":  "lazso",
+                       "name":  "LAZSO",
+                       "count":  83,
+                       "url":  "/catalog/brends/bid/lazso/",
+                       "logo":  "assets/img/brands/lazso.jpg"
+                   },
+                   {
+                       "slug":  "linemax",
+                       "name":  "LINEMAX",
+                       "count":  16,
+                       "url":  "/catalog/brends/bid/linemax/",
+                       "logo":  "assets/img/brands/linemax.png"
+                   },
+                   {
+                       "slug":  "livicom",
+                       "name":  "LIVICOM",
+                       "count":  49,
+                       "url":  "/catalog/brends/bid/livicom/",
+                       "logo":  "assets/img/brands/livicom.png"
+                   },
+                   {
+                       "slug":  "lonte-technology",
+                       "name":  "Lonte Technology",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/lonte-technology/",
+                       "logo":  "assets/img/brands/lonte-technology.png"
+                   },
+                   {
+                       "slug":  "ltv",
+                       "name":  "LTV",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ltv/",
+                       "logo":  "assets/img/brands/ltv.png"
+                   },
+                   {
+                       "slug":  "macroscop",
+                       "name":  "Macroscop",
+                       "count":  138,
+                       "url":  "/catalog/brends/bid/macroscop/",
+                       "logo":  "assets/img/brands/macroscop.png"
+                   },
+                   {
+                       "slug":  "mastermann",
+                       "name":  "MASTERMANN",
+                       "count":  107,
+                       "url":  "/catalog/brends/bid/mastermann/",
+                       "logo":  "assets/img/brands/mastermann.png"
+                   },
+                   {
+                       "slug":  "netlan",
+                       "name":  "NETLAN",
+                       "count":  266,
+                       "url":  "/catalog/brends/bid/netlan/",
+                       "logo":  "assets/img/brands/netlan.png"
+                   },
+                   {
+                       "slug":  "nikolan",
+                       "name":  "NIKOLAN",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/nikolan/",
+                       "logo":  "assets/img/brands/nikolan.png"
+                   },
+                   {
+                       "slug":  "nikomax",
+                       "name":  "NIKOMAX",
+                       "count":  2916,
+                       "url":  "/catalog/brends/bid/nikomax/",
+                       "logo":  "assets/img/brands/nikomax.png"
+                   },
+                   {
+                       "slug":  "nikomax-essential",
+                       "name":  "NIKOMAX ESSENTIAL",
+                       "count":  619,
+                       "url":  "/catalog/brends/bid/nikomax-essential/",
+                       "logo":  "assets/img/brands/nikomax-essential.png"
+                   },
+                   {
+                       "slug":  "noname",
+                       "name":  "Noname",
+                       "count":  53,
+                       "url":  "/catalog/brends/bid/noname/",
+                       "logo":  ""
+                   },
+                   {
+                       "slug":  "novicam",
+                       "name":  "Novicam",
+                       "count":  179,
+                       "url":  "/catalog/brends/bid/novicam/",
+                       "logo":  "assets/img/brands/novicam.png"
+                   },
+                   {
+                       "slug":  "novilock",
+                       "name":  "Novilock",
+                       "count":  32,
+                       "url":  "/catalog/brends/bid/novilock/",
+                       "logo":  "assets/img/brands/novilock.png"
+                   },
+                   {
+                       "slug":  "ntss",
+                       "name":  "NTSS",
+                       "count":  2566,
+                       "url":  "/catalog/brends/bid/ntss/",
+                       "logo":  "assets/img/brands/ntss.png"
+                   },
+                   {
+                       "slug":  "optex",
+                       "name":  "Optex",
+                       "count":  236,
+                       "url":  "/catalog/brends/bid/optex/",
+                       "logo":  "assets/img/brands/optex.png"
+                   },
+                   {
+                       "slug":  "optimus",
+                       "name":  "Optimus",
+                       "count":  456,
+                       "url":  "/catalog/brends/bid/optimus/",
+                       "logo":  "assets/img/brands/optimus.png"
+                   },
+                   {
+                       "slug":  "osnovo",
+                       "name":  "OSNOVO",
+                       "count":  413,
+                       "url":  "/catalog/brends/bid/osnovo/",
+                       "logo":  "assets/img/brands/osnovo.png"
+                   },
+                   {
+                       "slug":  "oxgard",
+                       "name":  "Oxgard",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/oxgard/",
+                       "logo":  "assets/img/brands/oxgard.png"
+                   },
+                   {
+                       "slug":  "pal-electronics-systems-russia",
+                       "name":  "PAL Electronics Systems Russia",
+                       "count":  11,
+                       "url":  "/catalog/brends/bid/pal-electronics-systems-russia/",
+                       "logo":  "assets/img/brands/pal-electronics-systems-russia.jpg"
+                   },
+                   {
+                       "slug":  "panasonic",
+                       "name":  "Panasonic",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/panasonic/",
+                       "logo":  "assets/img/brands/panasonic.png"
+                   },
+                   {
+                       "slug":  "pasystem",
+                       "name":  "PASystem",
+                       "count":  78,
+                       "url":  "/catalog/brends/bid/pasystem/",
+                       "logo":  "assets/img/brands/pasystem.png"
+                   },
+                   {
+                       "slug":  "pc-pet",
+                       "name":  "PC PET",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/pc-pet/",
+                       "logo":  "assets/img/brands/pc-pet.png"
+                   },
+                   {
+                       "slug":  "perco",
+                       "name":  "PERCo",
+                       "count":  308,
+                       "url":  "/catalog/brends/bid/perco/",
+                       "logo":  "assets/img/brands/perco.png"
+                   },
+                   {
+                       "slug":  "philips",
+                       "name":  "Philips",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/philips/",
+                       "logo":  "assets/img/brands/philips.jpg"
+                   },
+                   {
+                       "slug":  "promix",
+                       "name":  "Promix",
+                       "count":  234,
+                       "url":  "/catalog/brends/bid/promix/",
+                       "logo":  "assets/img/brands/promix.png"
+                   },
+                   {
+                       "slug":  "proxway",
+                       "name":  "ProxWay",
+                       "count":  52,
+                       "url":  "/catalog/brends/bid/proxway/",
+                       "logo":  "assets/img/brands/proxway.png"
+                   },
+                   {
+                       "slug":  "pv-link",
+                       "name":  "PV-Link",
+                       "count":  39,
+                       "url":  "/catalog/brends/bid/pv-link/",
+                       "logo":  "assets/img/brands/pv-link.png"
+                   },
+                   {
+                       "slug":  "r-lock",
+                       "name":  "R-Lock",
+                       "count":  64,
+                       "url":  "/catalog/brends/bid/r-lock/",
+                       "logo":  "assets/img/brands/r-lock.png"
+                   },
+                   {
+                       "slug":  "raysharp",
+                       "name":  "RaySharp",
+                       "count":  5,
+                       "url":  "/catalog/brends/bid/raysharp/",
+                       "logo":  "assets/img/brands/raysharp.png"
+                   },
+                   {
+                       "slug":  "red-energy",
+                       "name":  "Red Energy",
+                       "count":  9,
+                       "url":  "/catalog/brends/bid/red-energy/",
+                       "logo":  "assets/img/brands/red-energy.png"
+                   },
+                   {
+                       "slug":  "revolter",
+                       "name":  "Revolter",
+                       "count":  20,
+                       "url":  "/catalog/brends/bid/revolter/",
+                       "logo":  "assets/img/brands/revolter.png"
+                   },
+                   {
+                       "slug":  "rexant",
+                       "name":  "Rexant",
+                       "count":  4,
+                       "url":  "/catalog/brends/bid/rexant/",
+                       "logo":  "assets/img/brands/rexant.png"
+                   },
+                   {
+                       "slug":  "rubezh-strazh",
+                       "name":  "RUBEZH STRAZH",
+                       "count":  46,
+                       "url":  "/catalog/brends/bid/rubezh-strazh/",
+                       "logo":  "assets/img/brands/rubezh-strazh.png"
+                   },
+                   {
+                       "slug":  "rusguard",
+                       "name":  "RusGuard",
+                       "count":  64,
+                       "url":  "/catalog/brends/bid/rusguard/",
+                       "logo":  "assets/img/brands/rusguard.jpg"
+                   },
+                   {
+                       "slug":  "rvi",
+                       "name":  "RVI",
+                       "count":  131,
+                       "url":  "/catalog/brends/bid/rvi/",
+                       "logo":  "assets/img/brands/rvi.jpg"
+                   },
+                   {
+                       "slug":  "safegrid",
+                       "name":  "Safegrid",
+                       "count":  50,
+                       "url":  "/catalog/brends/bid/safegrid/",
+                       "logo":  "assets/img/brands/safegrid.png"
+                   },
+                   {
+                       "slug":  "safeline",
+                       "name":  "Safeline",
+                       "count":  34,
+                       "url":  "/catalog/brends/bid/safeline/",
+                       "logo":  "assets/img/brands/safeline.png"
+                   },
+                   {
+                       "slug":  "sarmatt",
+                       "name":  "SarmatT",
+                       "count":  6,
+                       "url":  "/catalog/brends/bid/sarmatt/",
+                       "logo":  "assets/img/brands/sarmatt.png"
+                   },
+                   {
+                       "slug":  "sc-t",
+                       "name":  "SC\u0026T",
+                       "count":  122,
+                       "url":  "/catalog/brends/bid/sc-t/",
+                       "logo":  "assets/img/brands/sc-t.jpg"
+                   },
+                   {
+                       "slug":  "schneider-electric",
+                       "name":  "Schneider Electric",
+                       "count":  4,
+                       "url":  "/catalog/brends/bid/schneider-electric/",
+                       "logo":  "assets/img/brands/schneider-electric.png"
+                   },
+                   {
+                       "slug":  "seagate",
+                       "name":  "Seagate",
+                       "count":  10,
+                       "url":  "/catalog/brends/bid/seagate/",
+                       "logo":  "assets/img/brands/seagate.jpg"
+                   },
+                   {
+                       "slug":  "security-force",
+                       "name":  "Security Force",
+                       "count":  13,
+                       "url":  "/catalog/brends/bid/security-force/",
+                       "logo":  "assets/img/brands/security-force.png"
+                   },
+                   {
+                       "slug":  "sigur",
+                       "name":  "Sigur",
+                       "count":  54,
+                       "url":  "/catalog/brends/bid/sigur/",
+                       "logo":  "assets/img/brands/sigur.jpg"
+                   },
+                   {
+                       "slug":  "simon",
+                       "name":  "SIMON",
+                       "count":  6,
+                       "url":  "/catalog/brends/bid/simon/",
+                       "logo":  "assets/img/brands/simon.png"
+                   },
+                   {
+                       "slug":  "slinex",
+                       "name":  "SLINEX",
+                       "count":  100,
+                       "url":  "/catalog/brends/bid/slinex/",
+                       "logo":  "assets/img/brands/slinex.png"
+                   },
+                   {
+                       "slug":  "slt",
+                       "name":  "SLT",
+                       "count":  233,
+                       "url":  "/catalog/brends/bid/slt/",
+                       "logo":  "assets/img/brands/slt.jpg"
+                   },
+                   {
+                       "slug":  "smartairkey",
+                       "name":  "SmartAirkey",
+                       "count":  33,
+                       "url":  "/catalog/brends/bid/smartairkey/",
+                       "logo":  "assets/img/brands/smartairkey.png"
+                   },
+                   {
+                       "slug":  "smartec",
+                       "name":  "Smartec",
+                       "count":  926,
+                       "url":  "/catalog/brends/bid/smartec/",
+                       "logo":  "assets/img/brands/smartec.png"
+                   },
+                   {
+                       "slug":  "smartwatt",
+                       "name":  "SmartWatt",
+                       "count":  137,
+                       "url":  "/catalog/brends/bid/smartwatt/",
+                       "logo":  "assets/img/brands/smartwatt.png"
+                   },
+                   {
+                       "slug":  "snr",
+                       "name":  "SNR",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/snr/",
+                       "logo":  "assets/img/brands/snr.png"
+                   },
+                   {
+                       "slug":  "sonar",
+                       "name":  "Sonar",
+                       "count":  178,
+                       "url":  "/catalog/brends/bid/sonar/",
+                       "logo":  "assets/img/brands/sonar.jpg"
+                   },
+                   {
+                       "slug":  "space-technology",
+                       "name":  "Space Technology",
+                       "count":  377,
+                       "url":  "/catalog/brends/bid/space-technology/",
+                       "logo":  "assets/img/brands/space-technology.png"
+                   },
+                   {
+                       "slug":  "spacecam",
+                       "name":  "SpaceCam",
+                       "count":  14,
+                       "url":  "/catalog/brends/bid/spacecam/",
+                       "logo":  "assets/img/brands/spacecam.png"
+                   },
+                   {
+                       "slug":  "stark-country",
+                       "name":  "Stark Country",
+                       "count":  115,
+                       "url":  "/catalog/brends/bid/stark-country/",
+                       "logo":  "assets/img/brands/stark-country.png"
+                   },
+                   {
+                       "slug":  "stelberry",
+                       "name":  "Stelberry",
+                       "count":  97,
+                       "url":  "/catalog/brends/bid/stelberry/",
+                       "logo":  "assets/img/brands/stelberry.png"
+                   },
+                   {
+                       "slug":  "stemax",
+                       "name":  "STEMAX",
+                       "count":  30,
+                       "url":  "/catalog/brends/bid/stemax/",
+                       "logo":  "assets/img/brands/stemax.jpg"
+                   },
+                   {
+                       "slug":  "tantos",
+                       "name":  "Tantos",
+                       "count":  396,
+                       "url":  "/catalog/brends/bid/tantos/",
+                       "logo":  "assets/img/brands/tantos.png"
+                   },
+                   {
+                       "slug":  "tdm-electric",
+                       "name":  "TDM ЕLECTRIC",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/tdm-electric/",
+                       "logo":  "assets/img/brands/tdm-electric.png"
+                   },
+                   {
+                       "slug":  "tech-krep",
+                       "name":  "TECH-KREP",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/tech-krep/",
+                       "logo":  "assets/img/brands/tech-krep.jpg"
+                   },
+                   {
+                       "slug":  "temid",
+                       "name":  "Temid",
+                       "count":  351,
+                       "url":  "/catalog/brends/bid/temid/",
+                       "logo":  "assets/img/brands/temid.png"
+                   },
+                   {
+                       "slug":  "tenda",
+                       "name":  "Tenda",
+                       "count":  192,
+                       "url":  "/catalog/brends/bid/tenda/",
+                       "logo":  "assets/img/brands/tenda.png"
+                   },
+                   {
+                       "slug":  "tesla",
+                       "name":  "TESLA",
+                       "count":  11,
+                       "url":  "/catalog/brends/bid/tesla/",
+                       "logo":  "assets/img/brands/tesla.png"
+                   },
+                   {
+                       "slug":  "tezter",
+                       "name":  "Tezter",
+                       "count":  20,
+                       "url":  "/catalog/brends/bid/tezter/",
+                       "logo":  "assets/img/brands/tezter.png"
+                   },
+                   {
+                       "slug":  "tfortis",
+                       "name":  "Tfortis",
+                       "count":  48,
+                       "url":  "/catalog/brends/bid/tfortis/",
+                       "logo":  "assets/img/brands/tfortis.png"
+                   },
+                   {
+                       "slug":  "tiandy",
+                       "name":  "Tiandy",
+                       "count":  157,
+                       "url":  "/catalog/brends/bid/tiandy/",
+                       "logo":  "assets/img/brands/tiandy.png"
+                   },
+                   {
+                       "slug":  "tlk",
+                       "name":  "TLK",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/tlk/",
+                       "logo":  "assets/img/brands/tlk.jpg"
+                   },
+                   {
+                       "slug":  "toua",
+                       "name":  "Toua",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/toua/",
+                       "logo":  "assets/img/brands/toua.png"
+                   },
+                   {
+                       "slug":  "tp-link",
+                       "name":  "TP-Link",
+                       "count":  3,
+                       "url":  "/catalog/brends/bid/tp-link/",
+                       "logo":  "assets/img/brands/tp-link.jpg"
+                   },
+                   {
+                       "slug":  "trassir",
+                       "name":  "TRASSIR",
+                       "count":  469,
+                       "url":  "/catalog/brends/bid/trassir/",
+                       "logo":  "assets/img/brands/trassir.png"
+                   },
+                   {
+                       "slug":  "universal",
+                       "name":  "UNIVersal",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/universal/",
+                       "logo":  "assets/img/brands/universal.png"
+                   },
+                   {
+                       "slug":  "uniview",
+                       "name":  "Uniview",
+                       "count":  363,
+                       "url":  "/catalog/brends/bid/uniview/",
+                       "logo":  "assets/img/brands/uniview.png"
+                   },
+                   {
+                       "slug":  "ventura",
+                       "name":  "Ventura",
+                       "count":  67,
+                       "url":  "/catalog/brends/bid/ventura/",
+                       "logo":  "assets/img/brands/ventura.png"
+                   },
+                   {
+                       "slug":  "vizit",
+                       "name":  "VIZIT",
+                       "count":  279,
+                       "url":  "/catalog/brends/bid/vizit/",
+                       "logo":  "assets/img/brands/vizit.png"
+                   },
+                   {
+                       "slug":  "western-digital",
+                       "name":  "Western Digital",
+                       "count":  10,
+                       "url":  "/catalog/brends/bid/western-digital/",
+                       "logo":  "assets/img/brands/western-digital.png"
+                   },
+                   {
+                       "slug":  "wi-tek",
+                       "name":  "Wi-Tek",
+                       "count":  233,
+                       "url":  "/catalog/brends/bid/wi-tek/",
+                       "logo":  "assets/img/brands/wi-tek.jpg"
+                   },
+                   {
+                       "slug":  "wispen",
+                       "name":  "Wispen",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/wispen/",
+                       "logo":  "assets/img/brands/wispen.png"
+                   },
+                   {
+                       "slug":  "wrline",
+                       "name":  "WRLine",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/wrline/",
+                       "logo":  "assets/img/brands/wrline.png"
+                   },
+                   {
+                       "slug":  "xiaomi",
+                       "name":  "Xiaomi",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/xiaomi/",
+                       "logo":  "assets/img/brands/xiaomi.png"
+                   },
+                   {
+                       "slug":  "yealink",
+                       "name":  "Yealink",
+                       "count":  259,
+                       "url":  "/catalog/brends/bid/yealink/",
+                       "logo":  "assets/img/brands/yealink.png"
+                   },
+                   {
+                       "slug":  "yeastar",
+                       "name":  "Yeastar",
+                       "count":  33,
+                       "url":  "/catalog/brends/bid/yeastar/",
+                       "logo":  "assets/img/brands/yeastar.png"
+                   },
+                   {
+                       "slug":  "zkteco",
+                       "name":  "ZKTeco",
+                       "count":  23,
+                       "url":  "/catalog/brends/bid/zkteco/",
+                       "logo":  "assets/img/brands/zkteco.png"
+                   },
+                   {
+                       "slug":  "avangard",
+                       "name":  "Авангард",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/avangard/",
+                       "logo":  "assets/img/brands/avangard.jpg"
+                   },
+                   {
+                       "slug":  "altonika",
+                       "name":  "Альтоника",
+                       "count":  3,
+                       "url":  "/catalog/brends/bid/altonika/",
+                       "logo":  "assets/img/brands/altonika.png"
+                   },
+                   {
+                       "slug":  "argus-spektr",
+                       "name":  "Аргус-спектр",
+                       "count":  17,
+                       "url":  "/catalog/brends/bid/argus-spektr/",
+                       "logo":  "assets/img/brands/argus-spektr.jpg"
+                   },
+                   {
+                       "slug":  "ariadna",
+                       "name":  "Ариадна",
+                       "count":  78,
+                       "url":  "/catalog/brends/bid/ariadna/",
+                       "logo":  "assets/img/brands/ariadna.png"
+                   },
+                   {
+                       "slug":  "arsenal-bezopasnosti",
+                       "name":  "Арсенал Безопасности",
+                       "count":  137,
+                       "url":  "/catalog/brends/bid/arsenal-bezopasnosti/",
+                       "logo":  "assets/img/brands/arsenal-bezopasnosti.jpg"
+                   },
+                   {
+                       "slug":  "bastion",
+                       "name":  "Бастион",
+                       "count":  386,
+                       "url":  "/catalog/brends/bid/bastion/",
+                       "logo":  "assets/img/brands/bastion.jpg"
+                   },
+                   {
+                       "slug":  "beltiz",
+                       "name":  "БелТИЗ",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/beltiz/",
+                       "logo":  "assets/img/brands/beltiz.png"
+                   },
+                   {
+                       "slug":  "blokpost",
+                       "name":  "БЛОКПОСТ",
+                       "count":  133,
+                       "url":  "/catalog/brends/bid/blokpost/",
+                       "logo":  "assets/img/brands/blokpost.png"
+                   },
+                   {
+                       "slug":  "bolid",
+                       "name":  "Болид",
+                       "count":  769,
+                       "url":  "/catalog/brends/bid/bolid/",
+                       "logo":  "assets/img/brands/bolid.png"
+                   },
+                   {
+                       "slug":  "vistl",
+                       "name":  "ВИСТЛ",
+                       "count":  180,
+                       "url":  "/catalog/brends/bid/vistl/",
+                       "logo":  "assets/img/brands/vistl.png"
+                   },
+                   {
+                       "slug":  "vostok",
+                       "name":  "Восток",
+                       "count":  16,
+                       "url":  "/catalog/brends/bid/vostok/",
+                       "logo":  "assets/img/brands/vostok.png"
+                   },
+                   {
+                       "slug":  "vers",
+                       "name":  "ВЭРС",
+                       "count":  78,
+                       "url":  "/catalog/brends/bid/vers/",
+                       "logo":  "assets/img/brands/vers.jpg"
+                   },
+                   {
+                       "slug":  "gefest",
+                       "name":  "Гефест",
+                       "count":  5,
+                       "url":  "/catalog/brends/bid/gefest/",
+                       "logo":  "assets/img/brands/gefest.png"
+                   },
+                   {
+                       "slug":  "gk-yuph",
+                       "name":  "ГК ЮПХ",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/gk-yuph/",
+                       "logo":  "assets/img/brands/gk-yuph.png"
+                   },
+                   {
+                       "slug":  "grand-magistr",
+                       "name":  "Гранд Магистр",
+                       "count":  91,
+                       "url":  "/catalog/brends/bid/grand-magistr/",
+                       "logo":  "assets/img/brands/grand-magistr.png"
+                   },
+                   {
+                       "slug":  "daksis",
+                       "name":  "Даксис",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/daksis/",
+                       "logo":  "assets/img/brands/daksis.jpg"
+                   },
+                   {
+                       "slug":  "dalsvyaz",
+                       "name":  "ДалСВЯЗЬ",
+                       "count":  164,
+                       "url":  "/catalog/brends/bid/dalsvyaz/",
+                       "logo":  "assets/img/brands/dalsvyaz.png"
+                   },
+                   {
+                       "slug":  "dip-intellekt",
+                       "name":  "ДИП-Интеллект",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/dip-intellekt/",
+                       "logo":  "assets/img/brands/dip-intellekt.png"
+                   },
+                   {
+                       "slug":  "ivkz",
+                       "name":  "ИВКЗ",
+                       "count":  59,
+                       "url":  "/catalog/brends/bid/ivkz/",
+                       "logo":  "assets/img/brands/ivkz.png"
+                   },
+                   {
+                       "slug":  "ivs-signalspecavtomatika",
+                       "name":  "ИВС-Сигналспецавтоматика",
+                       "count":  37,
+                       "url":  "/catalog/brends/bid/ivs-signalspecavtomatika/",
+                       "logo":  "assets/img/brands/ivs-signalspecavtomatika.png"
+                   },
+                   {
+                       "slug":  "irset",
+                       "name":  "ИРСЭТ",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/irset/",
+                       "logo":  "assets/img/brands/irset.png"
+                   },
+                   {
+                       "slug":  "istochnik-plyus",
+                       "name":  "Источник плюс",
+                       "count":  154,
+                       "url":  "/catalog/brends/bid/istochnik-plyus/",
+                       "logo":  "assets/img/brands/istochnik-plyus.jpg"
+                   },
+                   {
+                       "slug":  "kabeks",
+                       "name":  "Кабэкс",
+                       "count":  5,
+                       "url":  "/catalog/brends/bid/kabeks/",
+                       "logo":  "assets/img/brands/kabeks.jpg"
+                   },
+                   {
+                       "slug":  "komtid",
+                       "name":  "Комтид",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/komtid/",
+                       "logo":  "assets/img/brands/komtid.jpg"
+                   },
+                   {
+                       "slug":  "konkord",
+                       "name":  "Конкорд",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/konkord/",
+                       "logo":  "assets/img/brands/konkord.png"
+                   },
+                   {
+                       "slug":  "kontakt",
+                       "name":  "Контакт",
+                       "count":  16,
+                       "url":  "/catalog/brends/bid/kontakt/",
+                       "logo":  "assets/img/brands/kontakt.png"
+                   },
+                   {
+                       "slug":  "kosmos",
+                       "name":  "Космос",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/kosmos/",
+                       "logo":  "assets/img/brands/kosmos.png"
+                   },
+                   {
+                       "slug":  "krepdil",
+                       "name":  "Крепдил",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/krepdil/",
+                       "logo":  "assets/img/brands/krepdil.png"
+                   },
+                   {
+                       "slug":  "krepezhnaya-tehnika",
+                       "name":  "Крепежная техника",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/krepezhnaya-tehnika/",
+                       "logo":  "assets/img/brands/krepezhnaya-tehnika.png"
+                   },
+                   {
+                       "slug":  "kss",
+                       "name":  "КСС",
+                       "count":  89,
+                       "url":  "/catalog/brends/bid/kss/",
+                       "logo":  "assets/img/brands/kss.png"
+                   },
+                   {
+                       "slug":  "lazernye-sistemy",
+                       "name":  "Лазерные Системы",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/lazernye-sistemy/",
+                       "logo":  "assets/img/brands/lazernye-sistemy.png"
+                   },
+                   {
+                       "slug":  "liniya",
+                       "name":  "Линия",
+                       "count":  57,
+                       "url":  "/catalog/brends/bid/liniya/",
+                       "logo":  "assets/img/brands/liniya.png"
+                   },
+                   {
+                       "slug":  "magnito-kontakt",
+                       "name":  "Магнито-Контакт",
+                       "count":  265,
+                       "url":  "/catalog/brends/bid/magnito-kontakt/",
+                       "logo":  "assets/img/brands/magnito-kontakt.jpg"
+                   },
+                   {
+                       "slug":  "mirazh",
+                       "name":  "Мираж",
+                       "count":  12,
+                       "url":  "/catalog/brends/bid/mirazh/",
+                       "logo":  "assets/img/brands/mirazh.png"
+                   },
+                   {
+                       "slug":  "nzpo",
+                       "name":  "НЗПО",
+                       "count":  10,
+                       "url":  "/catalog/brends/bid/nzpo/",
+                       "logo":  "assets/img/brands/nzpo.png"
+                   },
+                   {
+                       "slug":  "nikom",
+                       "name":  "Ником",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/nikom/",
+                       "logo":  "assets/img/brands/nikom.png"
+                   },
+                   {
+                       "slug":  "nora-m",
+                       "name":  "Нора-М",
+                       "count":  199,
+                       "url":  "/catalog/brends/bid/nora-m/",
+                       "logo":  "assets/img/brands/nora-m.jpg"
+                   },
+                   {
+                       "slug":  "ogneza",
+                       "name":  "Огнеза",
+                       "count":  3,
+                       "url":  "/catalog/brends/bid/ogneza/",
+                       "logo":  "assets/img/brands/ogneza.png"
+                   },
+                   {
+                       "slug":  "olevs",
+                       "name":  "Олевс",
+                       "count":  118,
+                       "url":  "/catalog/brends/bid/olevs/",
+                       "logo":  "assets/img/brands/olevs.jpg"
+                   },
+                   {
+                       "slug":  "paritet",
+                       "name":  "Паритет",
+                       "count":  224,
+                       "url":  "/catalog/brends/bid/paritet/",
+                       "logo":  "assets/img/brands/paritet.jpg"
+                   },
+                   {
+                       "slug":  "pozhtehkabel",
+                       "name":  "ПожТехКабель",
+                       "count":  1819,
+                       "url":  "/catalog/brends/bid/pozhtehkabel/",
+                       "logo":  "assets/img/brands/pozhtehkabel.png"
+                   },
+                   {
+                       "slug":  "poliservis",
+                       "name":  "Полисервис",
+                       "count":  115,
+                       "url":  "/catalog/brends/bid/poliservis/",
+                       "logo":  "assets/img/brands/poliservis.png"
+                   },
+                   {
+                       "slug":  "promrukav",
+                       "name":  "Промрукав",
+                       "count":  16650,
+                       "url":  "/catalog/brends/bid/promrukav/",
+                       "logo":  "assets/img/brands/promrukav.png"
+                   },
+                   {
+                       "slug":  "promeko",
+                       "name":  "Промэко",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/promeko/",
+                       "logo":  "assets/img/brands/promeko.png"
+                   },
+                   {
+                       "slug":  "peap-alfateh-centr",
+                       "name":  "ПЭАП (Альфатех-Центр)",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/peap-alfateh-centr/",
+                       "logo":  "assets/img/brands/peap-alfateh-centr.jpg"
+                   },
+                   {
+                       "slug":  "ravelin",
+                       "name":  "Равелин",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ravelin/",
+                       "logo":  "assets/img/brands/ravelin.png"
+                   },
+                   {
+                       "slug":  "radiy",
+                       "name":  "Радий",
+                       "count":  20,
+                       "url":  "/catalog/brends/bid/radiy/",
+                       "logo":  "assets/img/brands/radiy.png"
+                   },
+                   {
+                       "slug":  "ritm",
+                       "name":  "Ритм",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ritm/",
+                       "logo":  "assets/img/brands/ritm.png"
+                   },
+                   {
+                       "slug":  "rielta",
+                       "name":  "Риэлта",
+                       "count":  209,
+                       "url":  "/catalog/brends/bid/rielta/",
+                       "logo":  "assets/img/brands/rielta.jpg"
+                   },
+                   {
+                       "slug":  "roskomplekt",
+                       "name":  "Роскомплект",
+                       "count":  4,
+                       "url":  "/catalog/brends/bid/roskomplekt/",
+                       "logo":  ""
+                   },
+                   {
+                       "slug":  "rubezh",
+                       "name":  "Рубеж",
+                       "count":  112,
+                       "url":  "/catalog/brends/bid/rubezh/",
+                       "logo":  "assets/img/brands/rubezh.jpg"
+                   },
+                   {
+                       "slug":  "rubezh-adresnyy",
+                       "name":  "Рубеж адресный",
+                       "count":  440,
+                       "url":  "/catalog/brends/bid/rubezh-adresnyy/",
+                       "logo":  "assets/img/brands/rubezh-adresnyy.jpg"
+                   },
+                   {
+                       "slug":  "si-nord",
+                       "name":  "Си-Норд",
+                       "count":  49,
+                       "url":  "/catalog/brends/bid/si-nord/",
+                       "logo":  "assets/img/brands/si-nord.png"
+                   },
+                   {
+                       "slug":  "sibirskiy-arsenal",
+                       "name":  "Сибирский Арсенал",
+                       "count":  301,
+                       "url":  "/catalog/brends/bid/sibirskiy-arsenal/",
+                       "logo":  "assets/img/brands/sibirskiy-arsenal.png"
+                   },
+                   {
+                       "slug":  "sokrat",
+                       "name":  "Сократ",
+                       "count":  204,
+                       "url":  "/catalog/brends/bid/sokrat/",
+                       "logo":  "assets/img/brands/sokrat.jpg"
+                   },
+                   {
+                       "slug":  "spektron",
+                       "name":  "Спектрон",
+                       "count":  324,
+                       "url":  "/catalog/brends/bid/spektron/",
+                       "logo":  "assets/img/brands/spektron.jpg"
+                   },
+                   {
+                       "slug":  "specavtomatika",
+                       "name":  "Спецавтоматика",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/specavtomatika/",
+                       "logo":  "assets/img/brands/specavtomatika.png"
+                   },
+                   {
+                       "slug":  "specinformatika-si",
+                       "name":  "Специнформатика-СИ",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/specinformatika-si/",
+                       "logo":  ""
+                   },
+                   {
+                       "slug":  "specpribor",
+                       "name":  "Спецприбор",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/specpribor/",
+                       "logo":  "assets/img/brands/specpribor.png"
+                   },
+                   {
+                       "slug":  "specsistemy",
+                       "name":  "Спецсистемы",
+                       "count":  46,
+                       "url":  "/catalog/brends/bid/specsistemy/",
+                       "logo":  "assets/img/brands/specsistemy.png"
+                   },
+                   {
+                       "slug":  "stroitel",
+                       "name":  "Строитель",
+                       "count":  122,
+                       "url":  "/catalog/brends/bid/stroitel/",
+                       "logo":  "assets/img/brands/stroitel.png"
+                   },
+                   {
+                       "slug":  "teko",
+                       "name":  "ТЕКО",
+                       "count":  102,
+                       "url":  "/catalog/brends/bid/teko/",
+                       "logo":  "assets/img/brands/teko.png"
+                   },
+                   {
+                       "slug":  "teleinformsvyaz",
+                       "name":  "Телеинформсвязь",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/teleinformsvyaz/",
+                       "logo":  "assets/img/brands/teleinformsvyaz.png"
+                   },
+                   {
+                       "slug":  "test-na-pravdu",
+                       "name":  "Тест на правду",
+                       "count":  2,
+                       "url":  "/catalog/brends/bid/test-na-pravdu/",
+                       "logo":  "assets/img/brands/test-na-pravdu.png"
+                   },
+                   {
+                       "slug":  "tehnokabel",
+                       "name":  "Технокабель",
+                       "count":  130,
+                       "url":  "/catalog/brends/bid/tehnokabel/",
+                       "logo":  "assets/img/brands/tehnokabel.png"
+                   },
+                   {
+                       "slug":  "tehnologiya",
+                       "name":  "Технология",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/tehnologiya/",
+                       "logo":  "assets/img/brands/tehnologiya.jpg"
+                   },
+                   {
+                       "slug":  "tehnosistemy",
+                       "name":  "Техносистемы",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/tehnosistemy/",
+                       "logo":  "assets/img/brands/tehnosistemy.png"
+                   },
+                   {
+                       "slug":  "trikolor",
+                       "name":  "Триколор",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/trikolor/",
+                       "logo":  ""
+                   },
+                   {
+                       "slug":  "trombon",
+                       "name":  "Тромбон",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/trombon/",
+                       "logo":  "assets/img/brands/trombon.jpg"
+                   },
+                   {
+                       "slug":  "uzk-rossiya",
+                       "name":  "УЗК Россия",
+                       "count":  3,
+                       "url":  "/catalog/brends/bid/uzk-rossiya/",
+                       "logo":  "assets/img/brands/uzk-rossiya.jpg"
+                   },
+                   {
+                       "slug":  "uralkabmed",
+                       "name":  "УралКабМедь",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/uralkabmed/",
+                       "logo":  "assets/img/brands/uralkabmed.png"
+                   },
+                   {
+                       "slug":  "cvetlit-kz",
+                       "name":  "Цветлит КЗ",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/cvetlit-kz/",
+                       "logo":  "assets/img/brands/cvetlit-kz.png"
+                   },
+                   {
+                       "slug":  "cmo",
+                       "name":  "ЦМО",
+                       "count":  577,
+                       "url":  "/catalog/brends/bid/cmo/",
+                       "logo":  "assets/img/brands/cmo.jpg"
+                   },
+                   {
+                       "slug":  "e-plast",
+                       "name":  "Э-Пласт",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/e-plast/",
+                       "logo":  "assets/img/brands/e-plast.png"
+                   },
+                   {
+                       "slug":  "ekoplast",
+                       "name":  "Экопласт",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ekoplast/",
+                       "logo":  "assets/img/brands/ekoplast.png"
+                   },
+                   {
+                       "slug":  "ekskon",
+                       "name":  "Экскон",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/ekskon/",
+                       "logo":  "assets/img/brands/ekskon.png"
+                   },
+                   {
+                       "slug":  "elektronnaya-manufaktura",
+                       "name":  "Электронная мануфактура",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/elektronnaya-manufaktura/",
+                       "logo":  ""
+                   },
+                   {
+                       "slug":  "elektrotehnika-i-avtomatika",
+                       "name":  "Электротехника и автоматика",
+                       "count":  294,
+                       "url":  "/catalog/brends/bid/elektrotehnika-i-avtomatika/",
+                       "logo":  "assets/img/brands/elektrotehnika-i-avtomatika.jpg"
+                   },
+                   {
+                       "slug":  "element",
+                       "name":  "Элемент",
+                       "count":  8,
+                       "url":  "/catalog/brends/bid/element/",
+                       "logo":  "assets/img/brands/element.png"
+                   },
+                   {
+                       "slug":  "elesta",
+                       "name":  "Элеста",
+                       "count":  40,
+                       "url":  "/catalog/brends/bid/elesta/",
+                       "logo":  "assets/img/brands/elesta.png"
+                   },
+                   {
+                       "slug":  "ente",
+                       "name":  "ЭНТЭ",
+                       "count":  280,
+                       "url":  "/catalog/brends/bid/ente/",
+                       "logo":  "assets/img/brands/ente.png"
+                   },
+                   {
+                       "slug":  "epotos",
+                       "name":  "Эпотос",
+                       "count":  117,
+                       "url":  "/catalog/brends/bid/epotos/",
+                       "logo":  "assets/img/brands/epotos.png"
+                   },
+                   {
+                       "slug":  "era",
+                       "name":  "ЭРА",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/era/",
+                       "logo":  "assets/img/brands/era.jpg"
+                   },
+                   {
+                       "slug":  "era-novyh-tehnologiy",
+                       "name":  "Эра новых технологий",
+                       "count":  14,
+                       "url":  "/catalog/brends/bid/era-novyh-tehnologiy/",
+                       "logo":  "assets/img/brands/era-novyh-tehnologiy.jpg"
+                   },
+                   {
+                       "slug":  "eridan",
+                       "name":  "Эридан",
+                       "count":  1,
+                       "url":  "/catalog/brends/bid/eridan/",
+                       "logo":  "assets/img/brands/eridan.png"
+                   }
+               ]
+}

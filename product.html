@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Товар — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs" id="crumbs"></nav>
+  <div id="pdp"></div>
+
+  <div class="tabs" id="tabs"></div>
+  <div id="panes"></div>
+
+  <section class="section">
+    <div class="section-head"><div><h2>Похожие товары</h2></div></div>
+    <div class="grid-products" id="rel"></div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const id = new URLSearchParams(location.search).get('id');
+  const p = PMAP[id] || PRODUCTS[0];
+  if (!p) { document.getElementById('pdp').innerHTML = '<p>Товар не найден</p>'; return; }
+  document.title = p.n + ' — ПРОТЭК';
+
+  /* характеристики: из каталога + добранные из наименования */
+  const allSpecs = allSpecsOf(p);
+
+  /* раздел, в котором лежит товар */
+  const cat = CATEGORIES.find(c => c.id === p.c);
+  const sub = cat && p.sc ? cat.sub.find(s => s.id === p.sc) : null;
+
+  document.getElementById('crumbs').innerHTML =
+    `<a href="index.html">Главная</a><span class="sep">/</span><a href="catalog.html">Каталог</a>` +
+    (cat ? `<span class="sep">/</span><a href="catalog.html?cat=${cat.id}">${cat.name}</a>` : '') +
+    (sub ? `<span class="sep">/</span><a href="catalog.html?cat=${cat.id}&sub=${sub.id}">${sub.name}</a>` : '');
+
+  /* ---------- галерея ---------- */
+  const shots = shotsOf(p);
+
+  const gallery = shots.length ? `
+    <div class="gallery">
+      <div class="gallery-main" id="gmain">
+        <img src="${shots[0]}" alt="${p.n}" id="gimg">
+      </div>
+      ${shots.length > 1 ? `<div class="thumbs">${shots.map((s, i) =>
+        `<button class="thumb ${i === 0 ? 'on' : ''}" data-src="${s}"><img src="${s}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}
+      <p class="gal-note muted">${shots.length} ${plural(shots.length,'фотография','фотографии','фотографий')}${p.vurl
+        ? ` · часть — с сайта <a class="lnk-b" href="${p.vurl}" target="_blank" rel="noopener">${p.b}</a>` : ''}</p>
+    </div>`
+    : `<div class="gallery"><div class="gallery-main">
+         <span class="no-photo lg">${icon('box','icon ph')}<span>Фотография уточняется у поставщика</span></span>
+       </div></div>`;
+
+  /* ---------- наличие ---------- */
+  const availRows = (p.av && p.av.length ? p.av : CITIES.map((c, i) => ({
+      c: c, s: (p.s && p.s[i]) ? 'stock' : 'order', t: (p.s && p.s[i]) ? 'В наличии' : ''
+    })))
+    .map(a => `<div class="av-row">
+        <span class="av-city">${icon('pin','icon icon-sm')} ${a.c}</span>
+        <span class="av-state ${a.s === 'stock' ? 'in' : 'out'}"><i></i>${a.s === 'stock' ? 'В наличии' : (a.t || 'Под заказ')}</span>
+      </div>`).join('');
+
+  document.getElementById('pdp').innerHTML = `
+  <div class="pdp">
+    ${gallery}
+
+    <div class="pdp-info">
+      <h1>${p.n}</h1>
+      <div class="pdp-meta">
+        ${p.b ? `<span>Производитель: <a href="catalog.html?brand=${encodeURIComponent(p.b)}" class="lnk-b">${p.b}</a></span>` : ''}
+        ${p.art ? `<span>Артикул производителя: <b>${p.art}</b></span>` : ''}
+        ${p.code ? `<span>Код товара: <b>${p.code}</b></span>` : ''}
+      </div>
+      ${p.prev ? `<p class="pdp-prev">${p.prev}</p>` : ''}
+
+      ${allSpecs.length ? `
+        <h3 class="pdp-h3">Основные характеристики</h3>
+        <div class="spec-table">
+          ${allSpecs.slice(0, 8).map(s => `<div class="spec-row"><span>${s[0]}</span>
+            <span>${s[1]}${s[2] ? `<i class="src-tag" title="Источник: ${s[2]}">${s[2]}</i>` : ''}</span></div>`).join('')}
+        </div>
+        ${allSpecs.length > 8 ? `<button class="lnk-more" data-tab="spec">Все характеристики (${allSpecs.length}) →</button>` : ''}
+      ` : ''}
+
+      <div class="pdp-actions">
+        <button class="btn btn-ghost btn-sm" data-fav="${p.id}">${icon('heart','icon icon-sm')} В избранное</button>
+        <a class="btn btn-ghost btn-sm" href="https://pro-tek.pro${p.u || ''}" target="_blank" rel="noopener">Карточка на pro-tek.pro</a>
+      </div>
+    </div>
+
+    <aside class="buybox">
+      <div class="price ${hasPrice(p) ? '' : 'on-request'}"><b>${priceText(p)}</b></div>
+      <div class="row">
+        <div class="qty" style="height:44px"><button id="minus">−</button><span id="qv">1</span><button id="plus">+</button></div>
+        <button class="btn btn-primary" style="flex:1" id="addbtn">${icon('cart','icon icon-sm')} ${hasPrice(p) ? 'В корзину' : 'Запросить цену'}</button>
+      </div>
+      <a class="btn btn-soft btn-block btn-phone" href="tel:+73833835014">${icon('phone','icon icon-sm')} +7 (383) 383-50-14</a>
+      <hr>
+      <h4 class="av-title">Наличие на складах</h4>
+      <div class="av-list">${availRows}</div>
+    </aside>
+  </div>`;
+
+  /* галерея: заранее подгружаем кадры, чтобы переключение шло без мигания */
+  shots.slice(1).forEach(s => { const i = new Image(); i.src = s; });
+
+  document.querySelectorAll('.thumb').forEach(t => t.addEventListener('click', () => {
+    document.getElementById('gimg').src = t.dataset.src;
+    document.querySelectorAll('.thumb').forEach(x => x.classList.toggle('on', x === t));
+  }));
+
+  /* количество и корзина */
+  let q = 1;
+  const qv = document.getElementById('qv');
+  document.getElementById('plus').addEventListener('click', () => { q++; qv.textContent = q; });
+  document.getElementById('minus').addEventListener('click', () => { if (q > 1) { q--; qv.textContent = q; } });
+  document.getElementById('addbtn').addEventListener('click', () => {
+    setQty(p.id, (store.cart[p.id] || 0) + q);
+    toast(hasPrice(p) ? `Добавлено: ${q} шт.` : 'Позиция добавлена — менеджер уточнит цену');
+  });
+
+  /* ---------- вкладки ---------- */
+  const tabs = [];
+  if (allSpecs.length) tabs.push(['spec', `Характеристики (${allSpecs.length})`]);
+  tabs.push(['deliv', 'Доставка и оплата']);
+
+  document.getElementById('tabs').innerHTML = tabs.map((t, i) =>
+    `<button class="${i === 0 ? 'on' : ''}" data-t="${t[0]}">${t[1]}</button>`).join('');
+
+  const panes = {
+    spec: allSpecs.length
+      ? `<div class="spec-table" style="max-width:820px">${allSpecs.map(s =>
+          `<div class="spec-row"><span>${s[0]}</span><span>${s[1]}${s[2] ? `<i class="src-tag" title="Источник: ${s[2]}">${s[2]}</i>` : ''}</span></div>`).join('')}</div>
+         <p class="muted" style="margin-top:14px;font-size:13px;max-width:70ch">Информация о товаре носит справочный характер. Характеристики и комплектация могут быть изменены производителем без предварительного уведомления.</p>`
+      : '',
+    deliv: `<h4 class="deliv-h">Самовывоз — бесплатно</h4>
+      <div class="pickup-grid">
+        ${[['Новосибирск','ул. Дуси Ковальчук, 378а, корпус 3'],
+           ['Барнаул','проспект Ленина, 195а'],
+           ['Кемерово','ул. Терешковой, 41В, пом. 12'],
+           ['Новокузнецк','ул. Орджоникидзе, 18'],
+           ['Томск','ул. Енисейская, 4'],
+           ['Красноярск','ул. Копылова, 50']].map(o => `
+          <div class="pickup">
+            <span class="pickup-ic">${icon('pin','icon icon-sm')}</span>
+            <span><b>${o[0]}</b><span>${o[1]}</span></span>
+          </div>`).join('')}
+      </div>
+      <div class="deliv-grid" style="margin-top:26px">
+        <div><h4>Доставка в городах присутствия</h4>
+          <p>От 500 ₽. Бесплатно при заказе от 30 000 ₽, а также в отдалённые районы по согласованию с менеджером.</p></div>
+        <div><h4>Доставка по России</h4>
+          <p>По тарифам транспортных компаний. От склада «Протэк» до терминала ТК — бесплатно, стоимость доставки оплачивается при получении.</p></div>
+        <div><h4>Важно</h4>
+          <p>Доставка осуществляется только до склада, разгрузка — силами клиента.</p></div>
+      </div>
+      <p class="muted" style="margin-top:16px;max-width:70ch">Наличие по складам показано в блоке справа. Сроки поставки под заказ уточняйте у менеджера: <a href="tel:+73833835014" class="lnk-b">+7 (383) 383-50-14</a>.</p>`
+  };
+  document.getElementById('panes').innerHTML = tabs.map((t, i) =>
+    `<div class="tab-pane ${i === 0 ? 'on' : ''}" data-p="${t[0]}">${panes[t[0]] || ''}</div>`).join('');
+
+  const activate = key => {
+    document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x.dataset.t === key));
+    document.querySelectorAll('.tab-pane').forEach(x => x.classList.toggle('on', x.dataset.p === key));
+  };
+  document.getElementById('tabs').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (b) activate(b.dataset.t);
+  });
+  document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
+    activate(b.dataset.tab);
+    document.getElementById('tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+
+  /* ---------- похожие ---------- */
+  let rel = [];
+  if (sub) rel = sub.ids.map(i => PMAP[i]).filter(x => x && x.id !== p.id);
+  if (rel.length < 5 && cat) {
+    const ids = new Set(cat.ids); cat.sub.forEach(s => s.ids.forEach(i => ids.add(i)));
+    [...ids].forEach(i => { const x = PMAP[i]; if (x && x.id !== p.id && !rel.includes(x) && rel.length < 5) rel.push(x); });
+  }
+  document.getElementById('rel').innerHTML = rel.slice(0, 5).map(productCard).join('');
+};
+</script>
+</body>
+</html>

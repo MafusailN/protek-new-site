@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Доставка — ПРОТЭК</title>
+<link rel="icon" href="assets/img/favicon.ico">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="wrap">
+  <nav class="crumbs"><a href="index.html">Главная</a><span class="sep">/</span><span>Доставка</span></nav>
+  <h1 style="font-size:32px;margin-bottom:10px">Доставка</h1>
+  <p class="muted" style="max-width:68ch;margin-bottom:26px">Самовывоз из шести городов присутствия, доставка по городу и отправка транспортными компаниями по всей России.</p>
+
+  <div class="usp" id="usp" style="margin-bottom:34px"></div>
+
+  <section class="section" style="padding-top:0">
+    <div class="section-head"><div><h2>Самовывоз — бесплатно</h2>
+      <p>Склады и пункты выдачи в городах присутствия</p></div></div>
+    <div class="grid-products" id="stores"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><h2>Доставка в городах присутствия</h2></div></div>
+    <div class="services"></div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+window.PAGE_INIT = function () {
+  const STORES = [
+    ['Новосибирск', 'ул. Дуси Ковальчук, 378а, корпус 3'],
+    ['Барнаул', 'проспект Ленина, 195а'],
+    ['Кемерово', 'ул. Терешковой, 41В, пом. 12'],
+    ['Новокузнецк', 'ул. Орджоникидзе, 18'],
+    ['Томск', 'ул. Енисейская, 4'],
+    ['Красноярск', 'ул. Копылова, 50']
+  ];
+
+  document.getElementById('usp').innerHTML = [
+    ['box','Самовывоз','Бесплатно в 6 городах'],
+    ['truck','По городу','От 500 ₽, бесплатно от 30 000 ₽'],
+    ['network','По России','По тарифам транспортных компаний'],
+    ['clock','Отгрузка','До терминала ТК — бесплатно']
+  ].map(u => `<div class="usp-card"><span class="ic">${icon(u[0])}</span><span><b>${u[1]}</b><span>${u[2]}</span></span></div>`).join('');
+
+  document.getElementById('stores').innerHTML = STORES.map(s => `
+    <div class="card store-card">
+      <div class="store-ic">${icon('pin')}</div>
+      <h3 class="card-title" style="min-height:auto;font-size:16px">${s[0]}</h3>
+      <p class="muted" style="font-size:13.5px">г. ${s[0]}, ${s[1]}</p>
+    </div>`).join('');
+
+  document.querySelector('.services').innerHTML = [
+    ['truck','Доставка в городах присутствия',
+     'Стоимость — от 500 ₽. Бесплатно при заказе от 30 000 ₽, а также в отдалённые районы по согласованию с менеджером. Список районов уточняйте у менеджера.'],
+    ['network','Доставка по России',
+     'По тарифам транспортных компаний. Доставка от склада «Протэк» до терминалов отгрузки транспортных компаний — бесплатная. Стоимость доставки оплачивается клиентом при получении.'],
+    ['box','Важно при получении',
+     'Доставка заказа осуществляется только до склада. Разгрузка производится силами клиента.']
+  ].map(s => `<div class="svc"><span class="ic">${icon(s[0])}</span><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');
+};
+</script>
+</body>
+</html>
